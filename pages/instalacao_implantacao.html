@@ -1,0 +1,267 @@
+
+<div class="content" id="instalacao_implantacao" style="scroll-margin-top: 100px">
+    <h1>Instalação e Implantação</h1>
+    <p>A plataforma do Defense IA permite tipos diferentes de implantação durante sua instalação, são essas, implantação de servidor único, distribuída, de estrutura N+M, de alta disponibilidade e mapeamento LAN para WAN.</p>
+    <h2 id="requisitos_do_servidor" style="scroll-margin-top: 100px">Requisitos do servidor</h2>
+    <div class="table-responsive">
+    <table class="table table-bordered">
+    <thead>
+        <tr>
+        <th style="text-align: center;">Parâmetros</th>
+        <th style="text-align: center;">Requisitos de Hardware</th>
+        <th style="text-align: center;">Sistema Operacional</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <td>Configuração recomendada</td>
+        <td stytle="list-style: none;">
+            <ul stytle="list-style: none;"><b>CPU:</b> Intel® Xeon® Silver 4314@ 2.4 GHz 16 núcleos</ul>
+            <ul stytle="list-style: none;"><b>RAM:</b> 16 GB</ul>
+            <ul stytle="list-style: none;"><b>Interface de Rede:</b> 4x portas Ethernet @ 1000 Mbps</ul>
+            <ul stytle="list-style: none;"><b>Armazenamento:</b> SSD/HDD Classe Enterprise 1 TB @ 7200 RPM</ul>
+            <ul stytle="list-style: none;"><b>Espaço Livre:</b> 500 GB</ul>
+        </td>
+        <td >
+            <ul stytle="list-style: none;">Windows 10 - 64 bit</ul>
+            <ul stytle="list-style: none;">Windows Server 2016</ul>
+            <ul stytle="list-style: none;">Windows Server 2019</ul>
+            <ul stytle="list-style: none;">Windows Server 2022</ul>
+        </td>
+        </tr>
+        <tr>
+        <td>Configuração Mínima</td>
+        <td>
+            <ul stytle="list-style: none;"><b>CPU:</b> Intel® Xeon® Silver 4114@ 2.2GHz 10 núcleos</ul>
+            <ul stytle="list-style: none;"><b>RAM:</b> 16 GB</ul>
+            <ul stytle="list-style: none;"><b>Interface de Rede:</b> 2x portas Ethernet @ 1000 Mbps</ul>
+            <ul stytle="list-style: none;"><b>Armazenamento:</b> HDD Classe Enterprise 1 TB @ 7200 RPM</ul>
+            <ul stytle="list-style: none;"><b>Espaço Livre:</b> 500 GB</ul>
+        </td>
+        <td >
+            <ul stytle="list-style: none;">Windows 10 - 64 bit</ul>
+        </td>
+        </tr>
+    </tbody>
+    </table>
+    </div>
+    <p class="instruction"><img src=".\imagens\nota.png" height="25px" id="nota"> Imagens de reconhecimento facial, vídeos, e arquivos não podem ser armazenados no disco do sistema e no diretório de instalação do Defense IA. É recomendado o uso de discos de rede para isso.</p>
+    <p class="instruction"><img src=".\imagens\nota.png" height="25px" id="nota"> Para melhor performance, é recomendado adicionar discos extras para armazena imagens.</p>
+    <h2 id="requisitos_do_cliente" style="scroll-margin-top: 100px">Requisitos do cliente</h2>
+    <div class="table-responsive">
+    <table class="table table-bordered">
+    <thead>
+        <tr>
+        <th style="text-align: center;">Parâmetros</th>
+        <th style="text-align: center;">Requisitos de Hardware</th>
+        <th style="text-align: center;">Sistema Operacional</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <td>Configuração recomendada</td>
+        <td>
+            <ul stytle="list-style: none;"><b>CPU:</b> Intel® Core™ i7 7700 4 Core™</ul>
+            <ul stytle="list-style: none;"><b>RAM:</b> 16 GB</ul>
+            <ul stytle="list-style: none;"><b>GPU:</b> NVIDIA GTX 1660 @ 6Gb RAM</ul>
+            <ul stytle="list-style: none;"><b>Armazenamento:</b> SSD para pasta de instalação do Defense IA</ul>
+            <ul stytle="list-style: none;"><b>Espaço Livre:</b> 200 GB</ul>
+        </td>
+        <td >
+            <ul stytle="list-style: none;">Windows 10 - 64 bit</ul>
+        </td>
+        </tr>
+    </tbody>
+    </table>
+    </div>
+    <p class="instruction"><img id="dica" src=".\imagens\dica.png" height="30px"> Verifique a ficha técnica do Defense IA para maiores informações sobre especificações do cliente. Encontre-a em <b><a href="https://www.intelbras.com/pt-br/software-de-seguranca-eletronica-defense-ia" style="color: var(--green-color)">nosso site.</a></b></p>
+    <!--SERVER UNICO-->
+    <h2 id="server_unico" style="scroll-margin-top: 100px">Implantação de servidor único</h2>
+    <p>Essa estrutura é recomendada para projetos envolvendo um menor números de dispositivos, dessa forma, apenas um servidor Defense IA é necessário.</p>
+    <p><img src=".\imagens\server_unico.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>
+    <h3 id="instalacao_servidor_unico" style="scroll-margin-top: 100px;">Instalação de servidor único</h3>
+    <li>Execute o instalador do Defense IA  <img src=".\imagens\instalador_defense.png" height="30px"></li>
+    <p class="instruction"><img src=".\imagens\nota.png" height="25px" img id="nota"> O nome do instalador inclui a versão e data, confirme-os antes da instalação.</p>
+
+
+    <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src=".\imagens\instalador-1.jpg" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid">
+            <div class="carousel-caption d-none d-md-block">
+              <h5></h5>
+              <p style="font-size: 16px; background-color:rgba(0,0,0,0.3);">Clique em <b>Software License Agreement</b> para ler os termos de contrato e selecione a checkbox para aceitá-los, e então clique em <b>Next</b>.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src=".\imagens\instalador-2.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5></h5>
+              <p style="font-size: 16px; background-color:rgba(0,0,0,0.3);">Selecione <b>Main</b> como tipo de servidor e clique em <b>Next</b>.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src=".\imagens\instalador-3.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5></h5>
+              <p style="font-size: 16px; background-color:rgba(0,0,0,0.5);">Selecione o diretório de instalação clicando em <b>Browse</b>, deixe habilitada a <i>checkbox</i> para gerar um atalho na área de trabalho e clique em <b>Install</b>.</p>
+            </div>  
+          </div>
+          <div class="carousel-item">
+            <img src=".\imagens\instalador-4.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5></h5>
+              <p style="font-size: 16px; background-color:rgba(0,0,0,0.5);">Após a instalação, clique em <b>Run</b> para continuar para a etapa de configuração.</p>
+            </div>  
+          </div>
+          <div class="carousel-item">
+            <img src=".\imagens\instalador-5.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5></h5>
+              <p style="font-size: 16px; background-color:rgba(0,0,0,0.3);">Selecione uma interface de rede para o servidor do Defense IA, e clique em <b>Next Step</b>.</p>
+            </div>  
+          </div>
+          <div class="carousel-item">
+            <img src=".\imagens\instalador-6.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5></h5>
+              <p style="font-size: 16px; background-color:rgba(0,0,0,0.3);">Durante etapa final, ative ou desative o TLS 1.0 se necessário. Clique em <b>Finish</b> para finalizar o processo de instalação e executar os serviços.</p>
+            </div>  
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Seguinte</span>
+        </button>
+      </div>
+
+      <p class="instruction"><img src=".\imagens\cuidado.png" height="25px"> A instalação deve demorar de 4 a 8 minutos. Não feche o programa ou desligue o computador durante o processo.</p>
+      <p class="instruction"><img id="dica" src=".\imagens\dica.png" height="30px"> Caso o servidor possua mais de uma interface de rede, você pode configurar ambas interfaces clicando em <b>Dual NIC</b>. Desta forma, você pode acessar dispositivos em 2 segmentos de rede diferentes</p>
+      <p class="instruction"><img src=".\imagens\nota.png" height="25px" id="nota"> TLS 1.0 possui vulnerabilidades conhecidas, é recomendável desativá-lo, porém isso torna a página web inacessível pelo navegador. Você deve habilitar TLS 1.1 e 1.2 nas configurações do navegador para acessar a página web.</p>
+      <p class="instruction"><img src=".\imagens\nota.png" height="25px" id="nota"> Se a memória RAM disponível for inferior a 8 GB, apenas serviços básicos de vídeo serão iniciados. Caso seja inferior a 4 GB, nenhum serviço será iniciado.</p>
+   
+    <!--
+    <p><img src=".\imagens\instalador-1.jpg" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>
+    <li>Clique em <b>Software License Agreement</b> para ler os termos de contrato e selecione a checkbox para aceitá-los, e então clique em <b>Next</b>.</li>
+    <p><img src=".\imagens\instalador-2.jpg" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>
+    <li>Selecione <b>Main</b> como tipo de servidor e clique em <b>Next</b>.</li>
+    <p><img src=".\imagens\instalador-3.jpg" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>
+    <li>Selecione o diretório de instalação clicando em <b>Browse</b>, deixe habilitada a <i>checkbox</i> para gerar um atalho na área de trabalho e clique em <b>Install</b>.</li>
+    <p class="instruction"><img src=".\imagens\nota.png" height="25px" id="nota"> Verifique se o local de instalação cumpre os requisitos de espaço disponível.</p>
+    <p class="instruction"><img src=".\imagens\cuidado.png" height="25px"> O processo de instalação deve demorar de 4 a 8 minutos. Não feche o programa ou desligue o computador.</p>
+    <p><img src=".\imagens\instalador-4.jpg" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>
+    <li>Após a instalação, clique em <b>Run</b> para continuar para a etapa de configuração.</li>
+    <p><img src=".\imagens\instalador-5.jpg" style="display: block; margin-left: auto; margin-right:auto;" class="img-fluid"></p>  
+    <li>Selecione uma interface de rede para o servidor do Defense IA, e clique em <b>Next Step</b>.</li>
+    <p class="instruction"><img id="dica" src=".\imagens\dica.png" height="30px"> Caso o servidor possua mais de uma interface de rede, você pode configurar ambas interfaces clicando em <b>Dual NIC</b>. Desta forma, você pode acessar dispositivos em 2 segmentos de rede diferentes</p>
+    <p><img src=".\imagens\instalador-6.jpg" style="display: block; margin-left: auto; margin-right:auto;" class="img-fluid"></p>  
+    <li>Durante etapa final, ative ou desative o TLS 1.0 se necessário. Clique em <b>Finish</b> para finalizar o processo de instalação e executar os serviços.</li>
+    <p class="instruction"><img src=".\imagens\nota.png" height="25px" id="nota"> TLS 1.0 possui vulnerabilidades conhecidas, é recomendável desativá-lo, porém isso torna a página web inacessível pelo navegador. Você deve habilitar TLS 1.1 e 1.2 nas configurações do navegador para acessar a página web.</p>
+    <p class="instruction"><img src=".\imagens\nota.png" height="25px" id="nota"> Se a memória RAM disponível for inferior a 8 GB, apenas serviços básicos de vídeo serão iniciados. Caso seja inferior a 4 GB, nenhum serviço será iniciado.</p>
+    -->
+
+    <h3 id="atualizar_desinstalar">Atualizar e desinstalar</h3>
+    <li>Para atualizar o sistema, instale normalmente a nova versão. A plataforma automaticamente cobrirá a versão anterior.</li>
+    <li>Para desinstalar a plataforma, acesse o diretório de instalação e siga para “..\Defense IA\Defense IA Server\uninstall\uninst.exe”. Siga as instruções do executável para desinstalar.</li>
+    <p></p>
+    <!--IMPLANTACAO DISTRIBUIDA-->
+    <h2 id="implantacao_distribuida" style="scroll-margin-top: 100px">Implantação distribuída</h2>
+    <p>Essa estrutura é recomendada para projetos médios e grandes. Sub-servidores são utilizados para compartilhar a carga do sistema, para que assim mais dispositivos 	possam ser acessados. Os sub-servidores se conectam ao servidor principal, e 	este, centralizado, administra-os. Até 10 sub-servidores podem se conectar a um servidor principal.</p>
+    <p><img src=".\imagens\implantacao_distribuida.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>
+    <h3 id="instalacao_servidor_principal">Instalação do servidor principal</h3>
+    <p>Para instalação do servidor principal, veja o capítulo “<a href="#instalacao_servidor_unico">Instalação de servidor único</a>”. Após a instalação do servidor principal, os sub-servidores podem ser instalados e seus status visualizados pelo cliente.</p>
+    <h3 id="instalacao_servidor_auxiliar" style="scroll-margin-top: 100px">Instalação de servidor auxiliar</h3>
+    <li>Execute o instalador do Defense IA  <img src=".\imagens\instalador_defense.png" height="30px"></li>
+    <p class="instruction"><img src=".\imagens\nota.png" height="25px" img id="nota"> O nome do instalador inclui a versão e data, confirme-os antes da instalação.</p>
+    <p><img src=".\imagens\instalador-1.jpg" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>
+    <li>Clique em <b>Software License Agreement</b> para ler os termos de contrato e selecione a checkbox para aceitá-los, e então clique em <b>Next</b>.</li>
+    <p><img src=".\imagens\instalador-2-sub.jpg" style="display: block; margin-left: auto; margin-right:auto;" class="img-fluid"></p>             
+    <li>Selecione <b>Sub</b> como tipo do servidor e clique em <b>Next</b>.</li>
+    <p><img src=".\imagens\instalador-3.jpg" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>
+    <li>Selecione o diretório de instalação clicando em <b>Browse</b>, deixe habilitada a <i>checkbox</i> para gerar um atalho na área de trabalho e clique em <b>Install</b>.</li>
+    <p class="instruction"><img src=".\imagens\nota.png" height="25px" id="nota"> Verifique se o local de instalação cumpre os requisitos de espaço disponível.</p>
+    <p class="instruction"><img src=".\imagens\cuidado.png" height="25px"> O processo de instalação deve demorar de 4 a 8 minutos. Não feche o programa ou desligue o computador.</p>           
+    <p><img src=".\imagens\instalador-4.jpg" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>
+    <li>Após a instalação, clique em <b>Run</b> para continuar para a etapa de configuração.</li>
+    <p><img src=".\imagens\instalador-5.jpg" style="display: block; margin-left: auto; margin-right:auto;" class="img-fluid"></p>  
+    <li>Selecione uma interface de rede para o servidor do Defense IA, e clique em <b>Next Step</b>.</li>
+    <p class="instruction"><img id="dica" src=".\imagens\dica.png" height="30px"> Caso o servidor possua mais de uma interface de rede, você pode configurar ambas interfaces clicando em <b>Dual NIC</b>. Desta forma, você pode acessar dispositivos em 2 segmentos de rede diferentes</p>
+    <p><img src=".\imagens\instalador-5_2.jpg" style="display: block; margin-left: auto; margin-right:auto;" class="img-fluid"></p>  
+    <li>Configure o endereço IP e porta do servidor principal a se conectar, e então clique em <b>Finish</b> para finalizar a instalação.</li>
+
+    <!-- Criar #REF para linkar para o capítulo de configuração de sub-servidores-->
+    
+<script>
+    function showConfiguracoesIniciais() {
+        document.getElementById('ConfigSistema').click();
+      // redirect the page to #implantacao
+      window.location.href = '#config_dist';
+    }
+</script>
+<script>
+    function showConfiguracoesBasicas() {
+        document.getElementById('ConfigBasicas').click();
+      // redirect the page to #implantacao
+      window.location.href = "#instalacao_cliente";
+    }
+</script>
+
+    <p class="instruction"><img src=".\imagens\nota.png" height="25px" id="nota"> Depois de instalar o servidor auxiliar, você deve habilitá-lo acessando o cliente pelo servidor principal para que funcione corretamente. Veja como configurá-lo em "Configurações Iniciais de Aplicativos ><a onclick="showConfiguracoesIniciais()" style="text-decoration: underline;">Implantação</a>".</p>
+
+    <h3 id="estrutura_M+N">Implantação de estrutura M+N</h3>
+    <p>Utilizando essa estrutura, é possível configurar um servidor standby para cada servidor auxiliar a fim de mais estabilidade.</p>
+    <p>Quando um servidor auxiliar apresenta uma falha de funcionamento, o sistema o substitui por um em espera; assim que o servidor auxiliar originalmente ativo normalizar, é possível manualmente retorná-lo como ativo. A configuração da estrutura é feita pelo cliente após pelo menos 2 servidores auxiliares configurados.</p>
+    <p>Veja o capítulo "<a onclick="showConfiguracoesBasicas()" style="text-decoration: underline;">Instalação e configuração do cliente</a>" para instalar o cliente e ter acesso às configurações do sistema.</p>
+    <li>No cliente, clique em <img src=".\imagens\config-client.jpg" height="50px">, em seguida em <b>Implantação</b> <img src=".\imagens\implantacao-client.jpg" height="110px"></li>
+    <li>Na aba configuração distribuída (<img src=".\imagens\configuracao_distribuida.png" height="40px">) ative os servidores auxiliares e acesse as configurações de um deles clicando na engrenagem <img src=".\imagens\habilita-slave.png" height="35px"></li>
+    <li>Selecione o tipo de servidor como <b>servidor auxiliar</b>, clique em <b>OK</b> no fim da página.</li>
+    <li>Realize a mesma operação para o segundo servidor, desta vez selecione o tipo de servidor como servidor <i>standby</i>.</li>
+    <li>Ao selecionar o tipo de servidor como <i>standby</i>, a lista de servidores auxiliares será atualizada, selecione o servidor o qual deseja acompanhar.</li>
+    <p class="instruction"><img src=".\imagens\nota.png" height="25px" id="nota"> Esta operação pode ser realizada múltiplas vezes, baseando-se no número recomendado de 10 servidores auxiliares ativos.</p>
+    <p class="instruction"><img id="dica" src=".\imagens\dica.png" height="30px"> Verifique a ficha técnica do Defense IA para maiores informações sobre especificações de servidor. Encontre-a em <b><a href="https://www.intelbras.com/pt-br/software-de-seguranca-eletronica-defense-ia" style="color: var(--green-color)">nosso site.</a></b></p>
+
+    <h2 id="implantacao_ha" style="scroll-margin-top: 100px">Implantação de alta disponibilidade</h2>
+    <p>Essa estrutura é recomendada para projetos que necessitam de alta disponibilidade dos serviços. O servidor secundário assume o gerenciamento quando o principal apresenta uma falha de funcionamento. É possível retornar o gerenciamento ao servidor originalmente ativo após sua recuperação.</p>
+    <p><img src=".\imagens\implantacao_ha.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>
+    <p class="instruction"><img id="dica" src=".\imagens\dica.png" height="30px"> Para maiores informações, veja o “Guia de configuração da ferramenta de replicação”. Caso encontre algum problema, contate nosso suporte técnico. Encontre-o em <b><a href="https://www.intelbras.com/pt-br/software-de-seguranca-eletronica-defense-ia" style="color: var(--green-color)">nosso site.</a></b></p>
+
+    <h2 id="implantacao_LAN_WAN" style="scroll-margin-top: 100px">Implantação de mapeamento LAN para WAN</h2>
+    <p>Caso queira acessar os serviços via uma rede WAN, o roteador deve ser configurado, mapeando as portas de acordo. A lista de portas pode ser encontrada em <b><a href="https://www.intelbras.com/pt-br/software-de-seguranca-eletronica-defense-ia" style="color: var(--green-color)">nosso site.</a></b></p>
+    <p>Se a plataforma está configurada numa rede LAN, é possível mapear o endereço IP para uma rede WAN ou um nome de domínio, e assim, acessar a plataforma.</p>
+    <li>Acesse a interface do <b>Defense IA Server</b> pelo aplicativo <img src=".\imagens\app.ico" height="35px"> e então, acesse as configurações de rede clicando na engrenagem no canto superior direito.</li>
+    <p><img src=".\imagens\config-server.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>
+    <li>Insira um endereço de IP WAN fixo ou nome de domínio no campo vazio e clique em <b>OK</b>. Os serviços reiniciarão.</li>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p style="text-align: center; font-size: 15px;">Defense IA® é um produto Intelbras©. Todos os direitos reservados.</p>
+
+    
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>

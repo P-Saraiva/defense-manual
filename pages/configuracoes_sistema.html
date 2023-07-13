@@ -1,0 +1,132 @@
+<div class="content" id="configuracoes_sistema" style="scroll-margin-top: 100px">
+    <h1>Configurações do sistema</h1>
+        <p>As configurações do sistema desempenham um papel essencial na personalização e gerenciamento do ambiente. Esses módulos são responsáveis por administrar diversos elementos que permitem uma customização precisa. Entre suas funcionalidades, incluem-se a configuração de servidores auxiliares, o gerenciamento de informações de licença, a definição de parâmetros do sistema, a disponibilização de opções de backup e a integração da plataforma por meio do módulo de síntese com ambientes externos.</p>
+        <h2 id="implantacao"style="scroll-margin-top: 100px">Implantação</h2> 
+            <p>A página de implantação apresenta duas opções para arquitetura do software e disposição dos dispositivos no sistema: Configuração distribuída e Configuração em cascata, ambas são apresentadas a seguir.</p>
+            <h3 id="config_dist">Configuração distribuída <img src=".\imagens\configuracao_distribuida.png" style="height: auto;"></h3>
+                <p>Nesta página, você pode configurar servidores auxiliares e administrar recursos (alocar dispositivos por servidores) a fim de aumentar e balancear o consumo de recursos computacionais do sistema. </p>
+                <p>Um servidor auxiliar escravo funciona como uma extensão de serviços do Defense IA, cedendo processamento computacional para aumentar a capacidade do sistema. Veja o <i><b><a href="https://www.intelbras.com/pt-br/software-de-seguranca-eletronica-defense-ia" style="color: var(--green-color)">Datasheet</a></b></i> para mais informações sobre a capacidade do sistema.</p>
+                <p>Caso servidores auxiliares tenham sido instalados (<a onclick="document.getElementById('Instalacao').click();" style="text-decoration: underline; cursor: pointer; scroll-margin-top: 1000px;">Instalação de servidor auxiliar</a>), estes aparecerão na lista, sendo possível configurá-los de acordo com o projeto.</p>
+                <p><img src=".\imagens\config_distribuida1.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>  
+                <p class="instruction"><img src=".\imagens\nota.png" height="25px" id="nota"> Nesta página a configuração do Servidor principal limita-se a alteração de seu nome.</p>    
+
+            <p>Ative os servidores auxiliares clicando no botão "ativar" <img src=".\imagens\ativar.png" style="height: auto;"></p>
+            <p class="instruction"><img id="dica" src=".\imagens\dica.png" height="30px"> Ao ativar os servidores, aguarde alguns segundos até estes conectarem-se ao servidor principal e clique em "atualizar" <img src=".\imagens\Atualizar.png" style="height: auto;"> para visualizar o estado do servidor como "Executando" <img src=".\imagens\executando.png" style="height: auto;"></p>
+
+            <p>Os servidores auxiliares (ou <i>slave servers</i>) suportam dois modos de configuração. Para configurá-los, clique na engrenagem <img src=".\imagens\settings.png" style="height: auto;"></p>
+                <li><b>Servidor auxiliar escravo:</b></li>
+                <p>Modo padrão. Ao ativá-lo, o servidor auxiliar já está configurado neste modo. Servidor auxiliar em modo escravo dispõe de seus recursos para o servidor principal, de tal forma, não é possível acessá-lo diretamente pelo Cliente já que ele funciona como uma extensão do servidor principal.
+                <p><img src=".\imagens\config_slave.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>  
+                <p>Caso haja um <a href="#server_standby">servidor auxiliar standby</a> configurado, este aparecerá disponível para vinculação:</p>
+                <p><img src=".\imagens\config_slave2.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>  
+            <li id="server_standby" style="scroll-margin-top: 100px"><b>Servidor auxiliar standby:</b></li>
+                <p>Um servidor auxiliar standby funciona como uma redundância ao servidor auxiliar escravo, assumindo como ativo em casos de indisponibilidade do servidor assistido. Utilizado em cenários de <a onclick="document.getElementById('Instalacao').click();" style="text-decoration: underline; cursor: pointer;" window.location.href ='#estrutura_M+N'>Implantação de estrutura M+N</a>.</p>
+                <p><img src=".\imagens\config_standby.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>  
+                <p>Para utilizar um servidor auxiliar standby, deve-se vinculá-lo a um servidor auxiliar escravo para realizar a redundância de disponibilidade.</p>   
+
+            <p>Ao configurar os servidores auxiliares, é possível verificá-los na tabela.</p>
+            <p><img src=".\imagens\config_distribuida2.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>          
+            
+            <li><img src=".\imagens\Offline.png" style="height: auto;">: Servidor desconectado, não funcional.</li>
+            <li><img src=".\imagens\executando.png" style="height: auto;">: Servidor conectado e funcional.</li>
+            <li><img src=".\imagens\ocioso.png" style="height: auto;">: Servidor auxiliar standby, em espera. Assumirá como servidor auxiliar escravo caso o servidor vinculado desconecte-se.</li>        
+        
+    <h3>Alocar Recursos</h3>
+        <p>Para balancear carga do sistema, é possível alocar recursos do sistema entre os servidores (principal e auxiliares), vinculando cada dispositivo com um servidor que será responsável por seu gerenciamento. Para isso clique em "<b>Alocar Recursos</b>" <img src=".\imagens\alocar_recursos.png" style="height: auto;"> na parte superior da tela.</p>
+        <p><img src=".\imagens\Page_alocarRecursos.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>          
+        <p>Existem duas opções para a alocação de recursos.</p>
+        <p><b>Alocação manual</b></p>
+            <p>Aloca-se um dispositivo por vez, isso pode ser feito ao arrastar o dispositivo da árvore de dispositivos para o bloco do servidor</p>
+        <p><img src=".\imagens\Page_alocarRecursos2.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>      
+        <p><b>Alocação automática</b></p>
+        <p>Ao clicar no botão <img src=".\imagens\alocacao_automatica.png" style="height: auto;">, uma janela com os servidores disponíveis será aberta. Selecione os servidores nos quais deseja realizar a alocação.</p>
+        <p><img src=".\imagens\alocacao_automatica2.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>      
+        <p>Clique em "<b>OK</b>" e em seguida, confirme a mensagem para continuar.</p>
+        <p><img src=".\imagens\alocacao_automatica3.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>      
+        <p>Ao confirmar a mensagem, a alocação automática iniciará, é possível acompanhar o processo pela barra de carregamento no canto superior da tela.</p>
+        <p><img src=".\imagens\alocacao_automatica4.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>      
+        <p>Ao finalizar, os dispositivos devem estar balanceados entre os servidores selecionados, desta forma, ambos os servidores atuam com uma carga de processamento computacional muito semelhante.</p>
+        <p><img src=".\imagens\alocacao_automatica5.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>      
+
+    <h3 id="config_cascata">Configuração em cascata <img src=".\imagens\configuracao_cascata.png" style="height: auto;"></h3>
+    <p>A plataforma Defense IA possui como característica expansiva a capacidade de estender dispositivos e gravações através da adição de um servidor adicional em forma de cascata. Ao incluir um servidor como um novo nível na cascata, é possível acessar todos os dispositivos e gravações por meio do servidor localizado no nível mais alto da cascata.</p>
+    <p><img src=".\imagens\config_cascata.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>      
+    <p>Para adicionar um servidor em cascata, clique em "<b>Adicionar</b>" <img src=".\imagens\add.png"> na guia superior da tela.</p>
+    <p><img src=".\imagens\adicionar-cascata.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>      
+    <p>Preencha as informações necessárias do servidor que deseja adicionar.</p>
+    <li><img src=".\imagens\nome.png"></li>
+    <p>Nome: Nome que identificará a cascata.</p>
+    <li><img src=".\imagens\Organizacao2.png"></li>
+    <p>Organização: Local no qual a cascata será alocada (os dispositivos estarão disponíveis no local selecionado).</p>
+    <li><img src=".\imagens\ip_dominio.png"></li>
+    <p>Endereço IP | Domínio: Endereço do servidor a ser adicionado.</p>
+    <li><img src=".\imagens\porta.png"></li>
+    <p>Porta: Porta de conexão do servidor a ser adicionado.</p>
+    <li><img src=".\imagens\NomeUsuario.png"></li>
+    <p>Nome de Usuário: Nome de usuário para acessar a plataforma - e seus dispositivos - a serem adicionados.</p>
+    <li><img src=".\imagens\SenhaUsuario2.png"></li>
+    <p>Senha: Senha de usuário para acessar a plataforma - e seus dispositivos - a serem adicionados.</p>
+    <!-- REVISAR -->
+    <p>Ao adicionar a cascata, esta aparecerá na lista e seus dispositivos e gravações já podem ser acessados. Veja <a onclick="">Central de Monitoramento</a> para mais informações.</p>
+    <p><img src=".\imagens\cascata_add.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>      
+
+    <h2 id="licenca"style="scroll-margin-top: 100px">Licença</h2>
+    <h3>Ativação Online</h3>
+    <h3>Ativação Offline</h3>
+
+    <h2 id="parametros"style="scroll-margin-top: 100px">Parâmetros</h2>
+    <h3></h3>
+    <h3 id="ServerAD">Active Directory</h3>
+
+    <h2 id="backup"style="scroll-margin-top: 100px">Backup</h2>
+    O backup é uma ferramenta importante do sistema, uma vez que permite a segurança, transferência de dados e, eventualmente, a recuperação destes. Você pode acessar a página de backup nas configurações do sistema em "Backup" <img src=".\imagens\backup.png" style="height: auto;">.
+    <h3>Baixar Backup</h3>
+    <p><img src=".\imagens\page_backup.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>      
+    <p>Há duas opções para realizar o backup na plataforma.</p>
+    <p><b>Backup Automático:</b></p>
+    <p>Em Backup automático é possível definir parâmetros de configuração para uma recorrência periódica do backup. Dentre essas configuram-se:</p>
+    <li><img src=".\imagens\numeroArquivos.png"></li>
+    <p>Número máximo de arquivos de backup: Define a quantidade entre 1 e 10 de arquivos de backup armazenados.</p>
+    <li><img src=".\imagens\periodo.png"></li>
+    <p>Período: Define a frequência do backup (nunca, diariamente, semanalmente, mensalmente).</p>
+    <li><img src=".\imagens\semana.png"></li>
+    <p>Semana: Define o dia da semana que o backup deve ser realizado.</p>
+    <li><img src=".\imagens\hora.png"></li>
+    <p>Hora: Define o horário que o backup deve ser realizado.</p>
+    <!--REVISAR-->
+    <p class="instruction"><img src=".\imagens\dica.png" height="25px" id="dica"> O caminho padrão para armazenamento de arquivos backup é localizado em "...".</p>
+    <p class="instruction"><img src=".\imagens\nota.png" height="25px" id="nota"> Ao realizar o backup, a senha do usuário deve ser confirmada, assim como a inserção de uma senha de criptografia para uma camada de segurança do arquivo de backup.</p>
+
+    <p><b>Backup Manual:</b></p>
+    <p>Em Backup manual configura-se o caminho para armazenar o arquivo clicando em <img src=".\imagens\file.png">. Realize o backup clicando o botão "Fazer Backup Agora".</p>
+
+    <h3>Restaurar Backup</h3>
+    <p>Caso deseje restaurar um arquivo de backup compatível, acesse "Restaurar" <img src=".\imagens\restaurar.png"></p>
+    <p>Nesta página você pode encontrar a lista de arquivos de backup, caso o backup automático esteja configurado. É possível restaurar o sistema a partir de um deles clicando em <img src=".\imagens\recuperar.png"> ou baixar o arquivo de backup clicando em <img src=".\imagens\baixarBckp.png">.</p>
+    <p>Também é possível recuperar um arquivo de backup armazenado localmente selecionando o caminho do arquivo desejado clicando em <img src=".\imagens\file.png">.</p>
+
+    <p class="instruction"><img src=".\imagens\dica.png" height="25px" id="dica"> Os arquivos de backup possuem extensão .dbk</p>
+    <p class="instruction"><img src=".\imagens\nota.png" height="25px" id="nota"> Para restaurar um arquivo de backup deve-se confirmar a senha de usuário e inserir a senha de criptografia definida ao gerar o arquivo.</p>
+    <p class="instruction"><img src=".\imagens\cuidado.png" height="25px"> A restauração de um arquivo de backup interromperá os serviços do servidor, e os reiniciarão. Todos os dados serão substituídos pelos presentes no arquivo de backup. O processo é irreversível.</p>
+    <p class="instruction"><img src=".\imagens\nota.png" height="25px" id="nota"> A chave de licença é um dado vinculado à máquina, não sendo afetada pela restauração do backup. Caso a licença atual não suporte o arquivo restaurado, está deverá ser atualizada para funcionamento pleno do sistema.</p>
+
+    <h2 id="sintese"style="scroll-margin-top: 100px">Síntese</h2>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p style="text-align: center; font-size: 15px;">Defense IA® é um produto Intelbras©. Todos os direitos reservados.</p>
+
+</div>

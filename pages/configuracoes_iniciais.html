@@ -1,0 +1,885 @@
+<script type="text/javascript" src="../js/script.js"></script>
+<div class="content" id="configuracoes_iniciais" style="scroll-margin-top: 100px">
+    <h1>Configurações Iniciais de aplicativos</h1>
+    <p>
+        Após concluir as <a onclick="document.getElementById('ConfigBasicas').click();" style="text-decoration: underline; cursor: pointer;">configurações básicas</a>, você pode avançar na preparação de alguns módulos essenciais para sua aplicação. Nesta página, você encontrará informações sobre a criação de planos de gravação, eventos, mapas e bancos de dados. Vale ressaltar que a configuração detalhada, destas e de outras funções, é abordada em capítulos posteriores.
+    </p>
+  <h2 id="config_gravacao"style="scroll-margin-top: 100px">Configuração de gravações</h2> 
+  <p>O menu para configurar as gravações de dispositivos encontra-se no menu de configuração de aplicativos, esse menu apresenta atalhos para configurar os módulos de uso que são encontrados no menu inicial. Também permite gerenciar dados e informações do sistema, como cadastros em seu banco de dados.</p>
+  <p><img src=".\imagens\config-apps.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>  
+
+  <h3 id="plano_gravacao"style="scroll-margin-top: 100px">Plano de Gravação</h3> 
+  <p>Acessando a página de Plano de Gravação <img src=".\imagens\plano_gravacao.png" style="height: auto;">, é possível navegar entre duas janelas, Plano e Recuperação de gravação</p>
+  <li style="list-style-type: none;"><h4><b>Criar plano de gravação</b></h4></li>
+  <p>É nesta janela em que adiciona-se os planos de gravação dos dispositivos adicionados no servidor, podendo optar pelo plano geral de gravação, ou plano de gravação por detecção de movimento. Assim como na página de <a href="configuracao_dispositivos">Configuração de dispositivos</a>, os dispositivos aparecem na aba de Organização. Para adicionar um plano de gravação para um ou mais dispositivos, clique em <b>Adicionar plano de gravação</b> no canto superior.</p>
+
+  <p class="instruction"><img src=".\imagens\dica.png" height="25px" id="dica"> O plano geral de gravação definirá um cronograma para que a gravação de canais de vídeo seja realizada quando o dispositivo estiver disponível, enquanto o plano de gravação por detecção de movimento funciona da mesma maneira, porém a gravação de canais de vídeo será realizada quando houver movimentação detectada.</p>
+  <p>Na aba aberta é possível configurar parâmetros como o tipo de transmissão (Principal, secundário 1 ou 2) que deseja gravar e o período de gravação.
+    O Defense IA apresenta 3 modelos de período pré-configurados, Modelo de período integral, de dias úteis e de fim de semana. <img src=".\imagens\periodo_gravacao.png" style="height: auto;"></p>
+    <p id="modelo_tempo" style="scroll-margin-top: 100px">Além deses, também é possível criar um período de gravação personalizado clicando em "criar modelo de cronograma" <img src=".\imagens\criar_modelo.png" style="height: auto;"></p>
+    <p><img src=".\imagens\modelo_tempo.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>  
+    Apague ou crie blocos em verde para definir os horários em que a gravação deve ser feita. Também é possível copiar um modelo já existente como referência.
+    <p>Por fim, selecione os canais de vídeo que deseja vincular a este plano de gravação; é possível selecioná-los na árvore de dispositivos abaixo.</p>
+    <p><img src=".\imagens\arvore-dispositivos.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>  
+    <p class="instruction"><img src=".\imagens\nota.png" height="25px" id="nota"> Todos os dispositivos selecionados serão vinculados ao mesmo plano de gravação, mas é possível gerenciá-los de forma separada.</p>    
+  </p>
+  <li style="list-style-type: none;"><h4><b>Recuperação de Gravação</b></h4></li>
+  <p>Na janela de recuperação de gravação, assim como na anterior, há duas opções, recuperação de vídeo e recuperação de arquivo; ambas apresentam o mesmo funcionamento, diferenciando-se apenas pela compatibilidade de dispositivos.</p>    
+  <p>A recuperação de gravação tem como objetivo agendar um cronograma para que vídeos e/ou arquivos sejam copiados do armazenamento do dispositivo para o armazenamento do servidor. Possuindo prazo máximo de 7 dias e mínimo de 1 dia (dia anterior), o plano pra recuperação de vídeos e arquivos pode ser configurado para ocorrer durante as 24 horas do dia.</p>
+  <p>Para adicionar um plano de recuperação para um ou mais dispositivos, clique em <b>Adicionar plano de recuperação</b> no canto superior.</p>
+  <p><img src=".\imagens\recuperacao_video.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>  
+  <p>Na aba aberta é possível configurar parâmetros como a quantidade de dias que deseja recuperar (1-7), o tipo de transmissão (Principal, secundário 1 ou 2) e os horários para realizar a recuperação. Por fim, selecione os canais de vídeo que deseja vincular ao plano de gravação; é possível selecioná-los na árvore de dispositivos abaixo.</p>
+  
+  <h2 id="config_eventos" style="scroll-margin-top: 100px">Configuração de Eventos</h2>
+  <p>Acessando a configuração de eventos <img src=".\imagens\evento.png" style="height: auto;"> é possível adicionar, editar, excluir, habilitar e desativar eventos. Todos os eventos cadastrados aparecem nessa interface, é possível gerenciá-los na aba acima e navegar por eles na aba de navegação abaixo.</p>
+  <p><img src=".\imagens\pagina-evento.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>  
+  <h3 id="adicionar_evento"style="scroll-margin-top: 100px">Adicionar Eventos</h3> 
+  <p>Para adicionar um evento, clique em <b>Adicionar</b>, a interface de criação de evento será aberta. Nessa interface deve-se selecionar parâmetros do sistema e de dispositivos, vinculando-os ao evento desejado, este processo é realizado em 5 etapas.</p>
+  <p>Primeiramente, deve-se indicar o tipo e origem do evento, selecionando um dos eventos disponíveis na lista e o dispositivo que será responsável pelo gatilho do evento.</p>
+  <p class="instruction"><img src=".\imagens\nota.png" height="25px" id="nota"> Note que os dispositivos disponíveis para seleção dependem do tipo de evento selecionado. Se algum dispositivo não aparece na lista, verifique se este é compatível com o tipo de evento selecionado.</p>
+  <p><img src=".\imagens\origem-evento.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>  
+  <p>Em seguida, em atributos do evento, indique o nível de prioridade do evento (baixo, médio ou alto) e o modelo de tempo que esse evento deve ficar ativo (para configurar um modelo de tempo personalizado, veja <a href="#modelo_tempo">aqui</a>). Também é possível definir uma Tag e adicionar comentários ao evento.</p>
+  <p><img src=".\imagens\atributos-evento.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>  
+  <p>É possível vincular ações a partir do acionamento do evento, para isso, ative o botão <b>Ação Vinculada</b> <img src=".\imagens\acao-vinculada.png" style="height: auto;">, novas opções aparecerão. Selecione as ações que deseja vincular ao evento, são elas:</p>
+  <li style="list-style: none;"><b>Vídeo de Conexão</b>
+    <p>Para vincular câmeras, canais de vídeo ou executar gravações de até 300 segundos. Você pode optar por vincular e/ou gravar o próprio canal de origem do evento ou selecionar outros dispositivos dispo</p>
+  </li>
+  <li style="list-style: none;"><b>Acionador de cópia instantâneo</b>
+    <p>a</p>
+  </li>
+
+  <li style="list-style: none;"><b>Vinculação PTZ</b>
+    <p></p>
+  </li>
+
+  <li style="list-style: none;"><b>Saída de Alarme</b>
+    <p></p>
+  </li>
+
+  <li style="list-style: none;"><b>Som e iluminação</b>
+    <p></p>
+  </li>
+
+  <li style="list-style: none;"><b>Controle de Acesso</b>
+    <p></p>
+  </li>
+
+  <li style="list-style: none;"><b>Video Wall</b>
+    <p></p>
+  </li>
+
+  <li style="list-style: none;"><b>Comando URL HTTP</b>
+    <p></p>
+  </li>
+
+  <li style="list-style: none;"><b>E-mail</b>
+    <p></p>
+  </li>
+
+  <p>Também é opcional ativar o Protocolo de Alarme ativando o botão <b>Protocolo de Alarme</b> <img src=".\imagens\protocolo-alarme.png" style="height: auto;"></p>
+  <p>O Protocolo de alarme é uma instrução disponível ao operador quando este reconhece o alarme</p>
+  <p>Por fim, selecione o(s) usuário(s) que deve(m) ser notificado(s) a partir do acionamento do evento</p>
+  <p><img src=".\imagens\notificar-usuario.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>  
+  <p>Clique em <b>OK</b> para finalizar a criação do evento. Caso posteriormente queira modificar alguma informação, clique no ícone de edição <img src=".\imagens\edicao.png" style="height: auto;"></p> 
+  <p>Mais informações sobre eventos podem ser encontradas na página <a onclick="document.getElementById('Eventos').click();" style="text-decoration: underline; cursor: pointer;">Central de eventos.</a></p>
+
+  <h2 id="config_mapa" style="scroll-margin-top: 100px">Configuração de Mapa</h2>
+  <p>Por padrão, o Defense IA tem configurado em seu ambiente o mapa vetorial da Google Maps, este se encontra em Mapa <img src=".\imagens\Mapa.png" style="height: auto;">, nas configurações. Caso queira utilizar outro mapa vetorial, você pode editá-lo clicando no ícone de edição do mapa vetorial como mostra a imagem abaixo.</p> 
+  <p><img src=".\imagens\mapa_vetorial.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>  
+  <p>Preencha as informações necessárias de acordo com a personalização desejada.</p>
+  <p><img src=".\imagens\edicao_mapVetor.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>  
+  <li style="list-style: none;"><b>Modo mapa</b>
+    <p>Neste campo seleciona-se o modo do mapa, dois modos podem ser configurados, Online e Offline.</p>
+  </li>
+  <li style="list-style: none;"><b>URL do mapa/Importar</b>
+    <p>Caso selecione o modo online, insira neste campo a URL do mapa vetorial, o endereço no qual a plataforma se conectará ao mapa.</p>
+    <p>Caso utilize o modo offline, importe o arquivo de mapa.</p>
+  </li>
+  <li style="list-style: none;"><b>Status inicial do mapa</b>
+    <p>Dentre esses campos são inseridos os parâmetros iniciais do mapa, configurando Latitude e Longitude iniciais do mapa, além de zoom máximo, mínimo e inicial.</p>
+  </li>
+  <h3>Mapas personalizados</h2>
+  <p>Além do mapa vetorial, também é possível utilizar um mapa raster próprio. Para isso, clique em <b>Adicionar um mapa</b> <img src=".\imagens\add_mapa.png" style="height: auto;"> para enviar a imagem (suporta formatos de imagem JPEG/JPG e PNG). O mapa adicionado aparecerá como um mapa principal.</p>
+  <p><img src=".\imagens\tela-mapa.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>  
+  <p>Clique duas vezes no mapa desejado para acessá-lo e visualizar a lista de dispositivos, você pode arrastá-los sob o mapa para adicioná-los a ele  </p>
+  <p><img src=".\imagens\mapa_disp.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>  
+  <p>Acima, há uma barra de ferramentas que permite o gerenciamento dos dispositivos no mapa.</p>
+  <p><img src=".\imagens\map-tools.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>  
+  <li style="list-style: none;">
+    <p><img src=".\imagens\map_tools1.png" style="height: auto;"> Ocultar/Mostrar o nome dos elementos inseridos no mapa.</p>
+  </li>
+  <li style="list-style: none;">
+    <p><img src=".\imagens\map_tools2.png" style="height: auto;"> Excluir elementos selecionados no mapa.</p>
+  </li>
+  <li style="list-style: none;">
+    <p><img src=".\imagens\map_tools3.png" style="height: auto;"> Filtrar elementos presentes no mapa.</p>
+  </li>
+  <li style="list-style: none;">
+    <p><img src=".\imagens\map_tools4.png" style="height: auto;"> Mover elementos inseridos no mapa.</p>
+  </li>
+  <li style="list-style: none;">
+    <p><img src=".\imagens\map_tools5.png" style="height: auto;"> Selecionar elementos no mapa. Seleção pelo clique.</p>
+  </li>
+  <li style="list-style: none;">
+    <p><img src=".\imagens\map_tools6.png" style="height: auto;"> Selecionar elementos no mapa. Cria uma área retangular para seleção.</p>
+  </li>
+  <li style="list-style: none;">
+    <p><img src=".\imagens\map_tools7.png" style="height: auto;"> Apaga todas as marcações presentes no mapa.</p>
+  </li>
+  <li style="list-style: none;">
+    <p><img src=".\imagens\map_tools8.png" style="height: auto;"> Adiciona um submapa como elemento no mapa.</p>
+  </li>
+  <li style="list-style: none;">
+    <p><img src=".\imagens\map_tools9.png" style="height: auto;"> Adiciona uma marcação no mapa como um elemento no mapa.</p>
+  </li>
+  <li style="list-style: none;">
+    <p><img src=".\imagens\map_tools10.png" style="height: auto;"> Redefine a visualização do mapa para encaixar na tela.</p>
+  </li>
+
+  <h3>Submapas</h3>
+  <p>Como visto pela ferramenta "Adicionar submapa", a plataforma também permite a hierarquização de mapas em camadas, ou seja, é possível adicionar camadas inferiores a mapas, como por exemplo, é possível adicionar um submapa "Área comum" ao mapa "Condomínio". Para isso, selecione a ferramenta "Adicionar submapa" e selecione um local no mapa. Insira o nome e imagem desejados.</p>
+  <p><img src=".\imagens\add_submapa_marc.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>  
+  <p><img src=".\imagens\add_submapa2.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>  
+  <p>Você pode acessar e gerenciar o submapa clicando duas vezes no elemento adicionado. É possível acessá-lo pela árvore de mapas no menu inicial também.</p>
+  
+  <p>Também é possível adicionar um submapa a partir da tela inicial da configuração de mapas. Para isso, selecione o mapa principal desejado na árvore de relacionamento de mapa.</p>
+   <p><img src=".\imagens\tela-mapa-marc.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>  
+   <p>Clique em "<b>Adicionar submapa</b>" <img src=".\imagens\add_submapa.png" style="height: auto;">. Insira o nome, imagem e posição no mapa principal.</p>
+  
+  <p class="instruction"><img src=".\imagens\dica.png" height="25px" id="dica"> É possível inserir até 8 camadas de mapas, com até 32 mapas por hierarquia.</p>
+  
+  <h2 id="config_PeV" style="scroll-margin-top: 100px">Configuração de Pessoas e Veículos</h2>
+  <p>No Defense IA, você pode registrar pessoas e veículos para integração de inteligências a um banco de dados próprio. A  plataforma permite a criação de grupos e subgrupos personalizados para classificar e organizar as informações de cadastro, além de associar diferentes autenticações e permissões de acesso a cada entidade registrada.</p>
+  <p>Essas funcionalidades podem ser encontradas no menu de configurações de Pessoas e Veículos. <img src=".\imagens\pessoas_veiculos.png" style="height: auto;"></p>
+  <h3 id="lista_pessoas">Cadastrar pessoas</h3>
+  <p>A estrutura da página divide-se entre a árvore de grupo de pessoas e a lista de pessoas, é possível adicionar, editar e excluir grupos pelas ferramentas mostradas abaixo. Assim como em outros módulos do programa, é possível criar hierarquias entre os grupos criados.</p>
+  <p><img src=".\imagens\grupoPessoas_ferramentas.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>  
+
+  <p>Existem dois métodos gerais para cadastrar pessoas na plataforma. Diretamente pelo módulo, preenchendo informações manualmente, ou a partir da importação de dados, seja de dispositivos compatíveis, ou uma planilha modelo preenchida. No capítulo <a onclick="document.getElementById('gerenciamento_dados').click();" style="text-decoration: underline; cursor: pointer;"><b>Gerenciamento de dados</b></a> a importação de dados para plataforma é abordada com mais detalhes.<p>
+  <p><img src=".\imagens\Telapessoas_veiculos.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>  
+  <p>Para cadastrar uma pessoa na plataforma diretamente pelo módulo, clique em "<b>Adicionar</b>" na guia de ferramentas acima.</p>
+
+  <li style="list-style: none;"><b>Informações Básicas</b>
+    <a href="" data-toggle="collapse" data-target="#collapseOne10" aria-expanded="false" aria-controls="collapseOne10" onclick="toggleText('ver10', 'collapse-bt10');">    
+    <img id="collapse-bt10" class="collapse-img rotated" src="./imagens/collapse.png"><span id="ver10" class="expandir"> Ver mais</span>
+    </a>
+    <div id="collapseOne10" class="collapse">
+      <p><img src=".\imagens\info_basicas.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>  
+      <p>Nesta etapa preenche-se informações básicas sobre a pessoa cadastrada. ID, nome e foto da pessoa são informações obrigatórias.</p>
+      <p>O ID é um Código único identificador da pessoa no sistema. O Defense IA gera um ID aleatório não existente. É possível alterar este campo.</p>
+      <p>Há duas opções para inserir uma foto da pessoa, por upload de arquivo de imagem (Envio), ou fotografia pela web-cam (Instantâneo).</p>
+      <p><img src=".\imagens\foto_pessoa.png" style="height: auto;"></p>
+    </div>
+  </li>
+  <br>
+  <li style="list-style: none;"><b>Informações Adicionais</b>
+    <a href="" data-toggle="collapse" data-target="#collapseOne11" aria-expanded="false" aria-controls="collapseOne11" onclick="toggleText('ver11', 'collapse-bt11');">    
+    <img id="collapse-bt11" class="collapse-img rotated" src="./imagens/collapse.png"><span id="ver11" class="expandir"> Ver mais</span>
+    </a>
+    <div id="collapseOne11" class="collapse">
+      <p><img src=".\imagens\info_adicionais.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>  
+      <p>É possível adicionar informações adicionais ao cadastro. Expandindo a aba de informações adicionais, campos extras para preenchimento aparecem, como Apelido, Endereço, Documento de identificação, data de nascimento, naturalidade, empresa e cargo.</p>
+    </div>
+  </li>
+  <br>
+  <li style="list-style: none;"><b>Informações de morador</b>
+    <a href="" data-toggle="collapse" data-target="#collapseOne12" aria-expanded="false" aria-controls="collapseOne12" onclick="toggleText('ver12', 'collapse-bt12');">    
+    <img id="collapse-bt12" class="collapse-img rotated" src="./imagens/collapse.png"><span id="ver12" class="expandir"> Ver mais</span>
+    </a>
+    <div id="collapseOne12" class="collapse">
+      <p><img src=".\imagens\info_morador.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>  
+      <!--REVISAR-->
+      <p>Caso utilize portaria remota no sistema, e queira vincular a pessoa cadastrada a um número de sala, é possível selecionar um existente a partir da lista suspensa (veja em  <a onclick="" style="text-decoration: underline; cursor: pointer;">Portaria remota</a> como cadastrar uma sala no sistema) ou inserir um manualmente no campo. Também é possível indicar pela <i>checkbox</i> se a pessoa cadastrada é responsável ou não pela sala.</p>
+    </div>
+  </li>
+  <br>
+  <li style="list-style: none;"><b>Informações de Autenticação</b>
+    <a href="" data-toggle="collapse" data-target="#collapseOne13" aria-expanded="false" aria-controls="collapseOne13" onclick="toggleText('ver13', 'collapse-bt13');">    
+    <img id="collapse-bt13" class="collapse-img rotated" src="./imagens/collapse.png"><span id="ver13" class="expandir"> Ver mais</span>
+    </a>
+    <div id="collapseOne13" class="collapse">
+      <p><img src=".\imagens\info_autenticacao.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>  
+      <!--REVISAR-->
+      <p>Nas informações de autenticação, você pode inserir métodos de autenticação da pessoa cadastrada, tais métodos poderão ser usados para acesso a dispositivos de controle de acesso presentes no sistema (veja em <a onclick="" style="text-decoration: underline; cursor: pointer;">Controle de acesso</a> como cadastrar grupos de acesso) </p>
+      <p>É possível inserir um período de validade, que indica o prazo para vencimento dos métodos de autenticação da pessoa.</p>
+      <p>Os métodos de autenticação são:</p>
+      <br>
+      <ul><b>Senha de autenticação multifator</b> - Senha numérica de 6 dígitos para uma segunda camada de segurança no acesso. 
+      <p class="instruction"><img src=".\imagens\nota.png" height="25px" id="nota"> Ao clicar no ícone <img src=".\imagens\icone_mfa.png" style="height: auto;"> habilita-se o cadastro de uma senha de desbloqueio direto, sem a necessidade de um segundo fator de autenticação.</p>
+      </ul>
+      <br>
+      <ul><b>Cartão</b> - Uma pessoa cadastrada pode possuir até 5 cartões, um deles deve ser o principal. O cartão deve apresentar um código hexadecimal de 8 à 16 dígitos.</ul>
+      <p>Existem dois métodos para registrar um cartão, digitando manualmente, caso o código do cartão seja conhecido, ou adicioná-lo via leitora. Para registrar um cartão via leitora, clique no ícone <img src=".\imagens\settings.png" style="height: auto;"> ao lado de "Cartão"</p>
+      <p><img src=".\imagens\card_issue.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>  
+      <p>É possível escolher entre uma leitora de cartão que pode ser conectada via USB com o computador, ou algum dispositivo de controle de acesso já conectado à plataforma. Ao selecionar a opção desejada, clique em <b>OK</b> e passe o cartão no sensor de leitura.</p>
+      <p><img src=".\imagens\cartao_codigo.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>  
+      <p>O código do cartão deve aparecer no campo, confirme para registrar o cartão. O mesmo passo pode ser repetido para emitir outros cartões.</p>
+      <p>Existem 4 funções de gerenciamento do cartão</p>
+      <p><img src=".\imagens\funcoes_cartao.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>  
+      <p><img src=".\imagens\cartao1.png" style="height: auto;"> Cartão principal - Selecione este ícone para definir o cartão como principal. Caso exista só um cartão, o mesmo já será o principal.</p>
+      <!--REVISAR-->
+      <p><img src=".\imagens\cartao2.png" style="height: auto;"> Cartão de coação - Selecione este ícone para definir o cartão como cartão de coação. Cartão de coação emite um evento de coação quando passado numa leitora conectada ao Defense IA (o evento deve ser devidamente configurado para notificar a plataforma, veja em <a onclick="" style="text-decoration: underline; cursor: pointer;">Eventos</a> como configurar um evento).</p>
+      <p><img src=".\imagens\cartao3.png" style="height: auto;"> Alterar número do cartão - Selecione este ícone para alterar o número do cartão.</p>
+      <p><img src=".\imagens\cartao4.png" style="height: auto;"> Excluir cartão - Selecione este ícone para excluir o cartão da plataforma.</p>
+      <p class="instruction"><img src=".\imagens\nota.png" height="25px" id="nota"> O cartão principal é o que será enviado para o dispositivo de controle de acesso.</p>    
+      <br>
+      <ul><b>Digital</b> - Até 3 digitais podem ser cadastradas por pessoa. Para cadastrar um digital, o sistema deve estar conectado à uma leitora de digitais, seja um leitor via USB ou dispositivo conectado à plataforma. Para registrar uma digital, clique no ícone <img src=".\imagens\settings.png" style="height: auto;"> ao lado de "Digital"</ul>
+      <p><img src=".\imagens\card_issue.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>  
+      <p>Selecione o dispositivo desejado para leitura e clique em <b>OK</b>. Em seguida, clique em <b>Adicionar</b> <img src=".\imagens\add.png" style="height: auto;"></p>
+      <p>Posicione o dedo no leitor, clique em <b>Adicionar digitais</b> e realize a coleta da impressão digital 3 vezes.</p>
+      <p>Existem 3 funções de gerenciamento da impressão digital</p>
+      <p><img src=".\imagens\funcoes_digital.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>  
+      <!--REVISAR-->
+      <p><img src=".\imagens\digital1.png" style="height: auto;"> Digital de coação - Selecione este ícone para definir a impressão digital como digital de coação. Digital de coação emite um evento de coação quando passada numa leitora conectada ao Defense IA (o evento deve ser devidamente configurado para notificar a plataforma, veja em <a onclick="" style="text-decoration: underline; cursor: pointer;">Eventos</a> como configurar um evento).</p>
+      <p><img src=".\imagens\digital2.png" style="height: auto;"> Alterar nome da impressão digital - Selecione este ícone para alterar o nome da impressão digital.</p>
+      <p><img src=".\imagens\digital3.png" style="height: auto;"> Excluir impressão digital - Selecione este ícone para excluir a digital da plataforma.</p>
+    </div>
+  </li>
+  <br>
+  <li style="list-style: none;"><b>Informações do Veículo</b>
+    <a href="" data-toggle="collapse" data-target="#collapseOne14" aria-expanded="false" aria-controls="collapseOne14" onclick="toggleText('ver14', 'collapse-bt14');">    
+    <img id="collapse-bt14" class="collapse-img rotated" src="./imagens/collapse.png"><span id="ver14" class="expandir"> Ver mais</span>
+    </a>
+    <div id="collapseOne14" class="collapse">
+      <p><img src=".\imagens\info_veiculos.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>  
+      <p>Para vincular um veículo à pessoa cadastrada, clique em "<b>+</b>" na aba <b>Informações do Veículo</b>. Preencha as informações como:</p>
+      <p>Placa do veículo: A placa é o identificador do veículo, ela será vinculada à pessoa cadastrada.</p>
+      <p>Cor do veículo: Selecione a cor do veículo na lista suspensa.</p>
+      <p>Marca do veículo: Selecione a marca do veículo na lista suspensa.</p>
+      <p>Comentários: Adicione comentários sobre o veículo no campo.</p>
+      <p>Veja mais informações sobre em <a href="#lista_veiculos">Cadastrar veículos</a></p>
+    </div>
+  </li>
+  <br>
+  <li style="list-style: none;"><b>Permissões de Controle de Acesso</b>
+    <a href="" data-toggle="collapse" data-target="#collapseOne15" aria-expanded="false" aria-controls="collapseOne15" onclick="toggleText('ver15', 'collapse-bt15');">    
+    <img id="collapse-bt15" class="collapse-img rotated" src="./imagens/collapse.png"><span id="ver15" class="expandir"> Ver mais</span>
+    </a>
+    <div id="collapseOne15" class="collapse">
+      <p><img src=".\imagens\permissoes_ca.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>  
+      <p>Ao ativar permissões de controle de acesso, deve-se especificar o tipo de acesso que será permitido à pessoa cadastrada. Selecione o tipo desejado na lista suspensa. Caso selecione a <i>checkbox</i> ao lado, a pessoa terá acesso à interface de administrador do dispositivo acessado.</p>
+      <!--REVISAR-->
+      <p>Clique em "<b>Adicionar</b>" <img src=".\imagens\add.png"> para inserir a pessoa num grupo de acesso específico. Veja <a>Controle de acesso</a> para mais informações</p>
+    </div>
+  </li>
+  <br>
+  <li style="list-style: none;"><b>Comparação de Rosto</b>
+    <a href="" data-toggle="collapse" data-target="#collapseOne16" aria-expanded="false" aria-controls="collapseOne16" onclick="toggleText('ver16', 'collapse-bt16');">    
+    <img id="collapse-bt16" class="collapse-img rotated" src="./imagens/collapse.png"><span id="ver16" class="expandir"> Ver mais</span>
+    </a>
+    <div id="collapseOne16" class="collapse">
+    <!--REVISAR-->
+    <p>Vincula a pessoa cadastrada a um grupo de comparação de rostos. Veja <a>Banco de dados</a> para ver como cadastrar um grupo de comparação de rostos.</p>
+    </div>
+  </li>
+  <br>  
+  <li style="list-style: none;"><b>Grupo de Veículos do Estacionamento</b>
+    <a href="" data-toggle="collapse" data-target="#collapseOne17" aria-expanded="false" aria-controls="collapseOne17" onclick="toggleText('ver17', 'collapse-bt17');">    
+    <img id="collapse-bt17" class="collapse-img rotated" src="./imagens/collapse.png"><span id="ver17" class="expandir"> Ver mais</span>
+    </a>
+    <div id="collapseOne17" class="collapse">
+      <p><img src=".\imagens\grupo_veiculos.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>
+      <!--REVISAR-->
+      <p>Locais disponíveis: Define à pessoa cadastrada a quantidade de vagas de estacionamento que esta pode ocupar.</p>
+      <p>Clicando em "<b>Adicionar</b>" <img src=".\imagens\add.png">, vincula a pessoa cadastrada e seus veículos a grupos de veículos. Veja <a>Estacionamento</a> para mais informações sobre como gerenciar grupos de veículos.</p>
+    </div>
+  </li>
+  <br>
+  <!--
+  <li style="list-style: none;"><b>Informações Básicas</b>
+    <p><img src=".\imagens\info_basicas.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>  
+    <p>Nesta etapa preenche-se informações básicas sobre a pessoa cadastrada. ID, nome e foto da pessoa são informações obrigatórias.</p>
+    <p>O ID é um Código único identificador da pessoa no sistema. O Defense IA gera um ID aleatório não existente. É possível alterar este campo.</p>
+    <p>Há duas opções para inserir uma foto da pessoa, por upload de arquivo de imagem (Envio), ou fotografia pela web-cam (Instantâneo).</p>
+    <p><img src=".\imagens\foto_pessoa.png" style="height: auto;"></p>
+  </li>
+  
+  <li style="list-style: none;"><b>Informações Adicionais</b>
+    <p><img src=".\imagens\info_adicionais.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>  
+    <p>É possível adicionar informações adicionais ao cadastro. Expandindo a aba de informações adicionais, campos extras para preenchimento aparecem, como Apelido, Endereço, Documento de identificação, data de nascimento, naturalidade, empresa e cargo.</p>
+  </li>
+  
+  <li style="list-style: none;"><b>Informações de morador</b>
+    <p><img src=".\imagens\info_morador.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>  
+    
+    <p>Caso utilize portaria remota no sistema, e queira vincular a pessoa cadastrada a um número de sala, é possível selecionar um existente a partir da lista suspensa (veja em  <a onclick="" style="text-decoration: underline; cursor: pointer;">Portaria remota</a> como cadastrar uma sala no sistema) ou inserir um manualmente no campo. Também é possível indicar pela <i>checkbox</i> se a pessoa cadastrada é responsável ou não pela sala.</p>
+  </li>
+  <li style="list-style: none;"><b>Informações de Autenticação</b>
+    <p><img src=".\imagens\info_autenticacao.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>  
+   
+    <p>Nas informações de autenticação, você pode inserir métodos de autenticação da pessoa cadastrada, tais métodos poderão ser usados para acesso a dispositivos de controle de acesso presentes no sistema (veja em <a onclick="" style="text-decoration: underline; cursor: pointer;">Controle de acesso</a> como cadastrar grupos de acesso) </p>
+    <p>É possível inserir um período de validade, que indica o prazo para vencimento dos métodos de autenticação da pessoa.</p>
+    <p>Os métodos de autenticação são:</p>
+
+    <li>Senha de autenticação multifator - Senha numérica de 6 dígitos para uma segunda camada de segurança no acesso. </li>
+    <p class="instruction"><img src=".\imagens\nota.png" height="25px" id="nota"> Ao clicar no ícone <img src=".\imagens\icone_mfa.png" style="height: auto;"> habilita-se o cadastro de uma senha de desbloqueio direto, sem a necessidade de um segundo fator de autenticação.</p>
+
+    <li>Cartão - Uma pessoa cadastrada pode possuir até 5 cartões, um deles deve ser o principal. O cartão deve apresentar um código hexadecimal de 8 à 16 dígitos.</li>
+    <p>Existem dois métodos para registrar um cartão, digitando manualmente, caso o código do cartão seja conhecido, ou adicioná-lo via leitora. Para registrar um cartão via leitora, clique no ícone <img src=".\imagens\settings.png" style="height: auto;"> ao lado de "Cartão"</p>
+    <p><img src=".\imagens\card_issue.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>  
+    <p>É possível escolher entre uma leitora de cartão que pode ser conectada via USB com o computador, ou algum dispositivo de controle de acesso já conectado à plataforma. Ao selecionar a opção desejada, clique em <b>OK</b> e passe o cartão no sensor de leitura.</p>
+    <p><img src=".\imagens\cartao_codigo.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>  
+    <p>O código do cartão deve aparecer no campo, confirme para registrar o cartão. O mesmo passo pode ser repetido para emitir outros cartões.</p>
+    <p>Existem 4 funções de gerenciamento do cartão</p>
+    <p><img src=".\imagens\funcoes_cartao.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>  
+    <p><img src=".\imagens\cartao1.png" style="height: auto;"> Cartão principal - Selecione este ícone para definir o cartão como principal. Caso exista só um cartão, o mesmo já será o principal.</p>
+    
+    <p><img src=".\imagens\cartao2.png" style="height: auto;"> Cartão de coação - Selecione este ícone para definir o cartão como cartão de coação. Cartão de coação emite um evento de coação quando passado numa leitora conectada ao Defense IA (o evento deve ser devidamente configurado para notificar a plataforma, veja em <a onclick="" style="text-decoration: underline; cursor: pointer;">Eventos</a> como configurar um evento).</p>
+    <p><img src=".\imagens\cartao3.png" style="height: auto;"> Alterar número do cartão - Selecione este ícone para alterar o número do cartão.</p>
+    <p><img src=".\imagens\cartao4.png" style="height: auto;"> Excluir cartão - Selecione este ícone para excluir o cartão da plataforma.</p>
+    <p class="instruction"><img src=".\imagens\nota.png" height="25px" id="nota"> O cartão principal é o que será enviado para o dispositivo de controle de acesso.</p>    
+
+    <li>Digital - Até 3 digitais podem ser cadastradas por pessoa. Para cadastrar um digital, o sistema deve estar conectado à uma leitora de digitais, seja um leitor via USB ou dispositivo conectado à plataforma. Para registrar uma digital, clique no ícone <img src=".\imagens\settings.png" style="height: auto;"> ao lado de "Digital"</li>
+    <p><img src=".\imagens\card_issue.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>  
+    <p>Selecione o dispositivo desejado para leitura e clique em <b>OK</b>. Em seguida, clique em <b>Adicionar</b> <img src=".\imagens\add.png" style="height: auto;"></p>
+    <p>Posicione o dedo no leitor, clique em <b>Adicionar digitais</b> e realize a coleta da impressão digital 3 vezes.</p>
+    <p>Existem 3 funções de gerenciamento da impressão digital</p>
+    <p><img src=".\imagens\funcoes_digital.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>  
+    
+    <p><img src=".\imagens\digital1.png" style="height: auto;"> Digital de coação - Selecione este ícone para definir a impressão digital como digital de coação. Digital de coação emite um evento de coação quando passada numa leitora conectada ao Defense IA (o evento deve ser devidamente configurado para notificar a plataforma, veja em <a onclick="" style="text-decoration: underline; cursor: pointer;">Eventos</a> como configurar um evento).</p>
+    <p><img src=".\imagens\digital2.png" style="height: auto;"> Alterar nome da impressão digital - Selecione este ícone para alterar o nome da impressão digital.</p>
+    <p><img src=".\imagens\digital3.png" style="height: auto;"> Excluir impressão digital - Selecione este ícone para excluir a digital da plataforma.</p>
+  </li>
+
+  <li style="list-style: none;"><b>Informações do Veículo</b>
+    <p><img src=".\imagens\info_veiculos.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>  
+    <p>Para vincular um veículo à pessoa cadastrada, clique em "<b>+</b>" na aba <b>Informações do Veículo</b>. Preencha as informações como:</p>
+    <p>Placa do veículo: A placa é o identificador do veículo, ela será vinculada à pessoa cadastrada.</p>
+    <p>Cor do veículo: Selecione a cor do veículo na lista suspensa.</p>
+    <p>Marca do veículo: Selecione a marca do veículo na lista suspensa.</p>
+    <p>Comentários: Adicione comentários sobre o veículo no campo.</p>
+    <p>Veja mais informações sobre em <a href="#lista_veiculos">Cadastrar veículos</a></p>
+  </li>
+  
+  <li style="list-style: none;"><b>Permissões de Controle de Acesso</b>
+    <p><img src=".\imagens\permissoes_ca.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>  
+    <p>Ao ativar permissões de controle de acesso, deve-se especificar o tipo de acesso que será permitido à pessoa cadastrada. Selecione o tipo desejado na lista suspensa. Caso selecione a <i>checkbox</i> ao lado, a pessoa terá acesso à interface de administrador do dispositivo acessado.</p>
+    
+    <p>Clique em "<b>Adicionar</b>" <img src=".\imagens\add.png"> para inserir a pessoa num grupo de acesso específico. Veja <a>Controle de acesso</a> para mais informações</p>
+  </li>
+
+  <li style="list-style: none;"><b>Comparação de Rosto</b>
+    
+    <p>Vincula a pessoa cadastrada a um grupo de comparação de rostos. Veja <a>Banco de dados</a> para ver como cadastrar um grupo de comparação de rostos.</p>
+  </li>
+
+  <li style="list-style: none;"><b>Grupo de Veículos do Estacionamento</b>
+    <p><img src=".\imagens\grupo_veiculos.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>
+
+    <p>Locais disponíveis: Define à pessoa cadastrada a quantidade de vagas de estacionamento que esta pode ocupar. Veja <a>Estacionamento</a> para mais informações.</p>
+    <p>Clicando em "<b>Adicionar</b>" <img src=".\imagens\add.png">, vincula a pessoa cadastrada e seus veículos a grupos de veículos. Veja <a>Estacionamento</a> para mais informações sobre como gerenciar grupos de veículos.</p>
+  </li>
+-->
+  <p>Ao fim do cadastro, a pessoa aparecerá na lista juntamente com algumas informações cadastradas. Você pode editar informações clicando no ícone de edição <img src=".\imagens\edicao.png">, ou excluí-la clicando no ícone de exclusão <img src=".\imagens\digital3.png"></p>
+  <p><img src=".\imagens\pessoa_cadastrada.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>
+  <p>É possível visualizar detalhes do cadastro clicando duas vezes sob o mesmo. Também é possível visualizar o QR-code vinculado à pessoa clicando no ícone <img src=".\imagens\qrcode.png"> na coluna "<b>Informações de Autenticação</b>". Este QR-code pode ser utilizado para liberar acesso baseado nas permissões concedidas.</p>
+
+
+  <h3 id="lista_veiculos"style="scroll-margin-top: 100px">Cadastrar veículos</h3>
+  <p>Na janela <b>Lista de Veículos</b>, clique em "<b>Adicionar</b>" <img src=".\imagens\add.png"> para registrar um veículo na lista.</p>
+  <p><img src=".\imagens\lista-veiculos.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>  
+  
+  <li style="list-style: none;"><b>Informação do Proprietário</b>
+    <a href="" data-toggle="collapse" data-target="#collapseOne18" aria-expanded="false" aria-controls="collapseOne18" onclick="toggleText('ver18', 'collapse-bt18');">    
+    <img id="collapse-bt18" class="collapse-img rotated" src="./imagens/collapse.png"><span id="ver18" class="expandir"> Ver mais</span>
+    </a>
+    <div id="collapseOne18" class="collapse">
+      <p><img src=".\imagens\info_proprietario.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>  
+      <p>Caso o veículo que será cadastrado possua um proprietário cadastrado na plataforma, é possível selecioná-lo em "<b>Selecione da lista de pessoas</b>". Suas informações aparecerão nas caixas abaixo.</p>
+    </div>
+  </li>
+  <br>
+  <li style="list-style: none;"><b>Informações do Veículo</b>
+    <a href="" data-toggle="collapse" data-target="#collapseOne19" aria-expanded="false" aria-controls="collapseOne19" onclick="toggleText('ver19', 'collapse-bt19');">    
+    <img id="collapse-bt19" class="collapse-img rotated" src="./imagens/collapse.png"><span id="ver19" class="expandir"> Ver mais</span>
+    </a>
+    <div id="collapseOne19" class="collapse">
+      <p><img src=".\imagens\info_veiculos.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>
+      <p>Placa do veículo: A placa é o identificador do veículo, ela será vinculada à pessoa cadastrada.</p>
+      <p>Cor do veículo: Selecione a cor do veículo na lista suspensa.</p>
+      <p>Marca do veículo: Selecione a marca do veículo na lista suspensa.</p>
+      <p>Comentários: Adicione comentários sobre o veículo no campo.</p> 
+    </div>
+  </li>
+  <br>
+  <li style="list-style: none;"><b>Grupo de Veículos do Estacionamento</b>
+    <a href="" data-toggle="collapse" data-target="#collapseOne20" aria-expanded="false" aria-controls="collapseOne20" onclick="toggleText('ver20', 'collapse-bt20');">    
+    <img id="collapse-bt20" class="collapse-img rotated" src="./imagens/collapse.png"><span id="ver20" class="expandir"> Ver mais</span>
+    </a>
+    <div id="collapseOne20" class="collapse">
+      <p><img src=".\imagens\grupo_veiculos.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>
+      <!--REVISAR-->
+      <p>Locais disponíveis: Caso um proprietário esteja vinculado ao veículo, este campo aparece. Define ao proprietário a quantidade de vagas de estacionamento que esta pode ocupar. Veja <a>Estacionamento</a> para mais informações.</p>
+      <p>Clicando em "<b>Adicionar</b>" <img src=".\imagens\add.png">, vincula veículos a grupos de veículos e um período de validade. Veja <a>Estacionamento</a> para mais informações sobre como gerenciar grupos de veículos.</p>
+    </div>
+  </li>
+  <br>
+  <li style="list-style: none;"><b>Grupo de armação de veículos</b>
+    <a href="" data-toggle="collapse" data-target="#collapseOne21" aria-expanded="false" aria-controls="collapseOne21" onclick="toggleText('ver21', 'collapse-bt21');">    
+    <img id="collapse-bt21" class="collapse-img rotated" src="./imagens/collapse.png"><span id="ver21" class="expandir"> Ver mais</span>
+    </a>
+    <div id="collapseOne21" class="collapse">
+      <p><img src=".\imagens\grupo_armacao_veiculos.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>
+      <p>Clicando em "<b>Adicionar</b>" <img src=".\imagens\add.png">, vincula veículos a grupos de armação de veículos e um período de validade. Veja <a href="#banco_dados">Banco de dados</a> para mais informações sobre como gerenciar grupos de armação de veículos.</p>  
+    </div>
+  </li>
+  <br>
+
+  <!--
+  <li style="list-style: none;"><b>Informação do Proprietário</b>
+    <p><img src=".\imagens\info_proprietario.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>  
+    <p>Caso o veículo que será cadastrado possua um proprietário cadastrado na plataforma, é possível selecioná-lo em "<b>Selecione da lista de pessoas</b>". Suas informações aparecerão nas caixas abaixo.</p>
+  </li>
+  
+  <li style="list-style: none;"><b>Informações do Veículo</b>
+    <p><img src=".\imagens\info_veiculos.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>
+    <p>Placa do veículo: A placa é o identificador do veículo, ela será vinculada à pessoa cadastrada.</p>
+    <p>Cor do veículo: Selecione a cor do veículo na lista suspensa.</p>
+    <p>Marca do veículo: Selecione a marca do veículo na lista suspensa.</p>
+    <p>Comentários: Adicione comentários sobre o veículo no campo.</p>  
+  </li>
+
+  <li style="list-style: none;"><b>Grupo de Veículos do Estacionamento</b>
+    <p><img src=".\imagens\grupo_veiculos.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>
+  
+    <p>Locais disponíveis: Caso um proprietário esteja vinculado ao veículo, este campo aparece. Define ao proprietário a quantidade de vagas de estacionamento que esta pode ocupar. Veja <a>Estacionamento</a> para mais informações.</p>
+    <p>Clicando em "<b>Adicionar</b>" <img src=".\imagens\add.png">, vincula veículos a grupos de veículos e um período de validade. Veja <a>Estacionamento</a> para mais informações sobre como gerenciar grupos de veículos.</p>
+  </li>
+
+  <li style="list-style: none;"><b>Grupo de armação de veículos</b>
+    <p><img src=".\imagens\grupo_armacao_veiculos.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>
+    <p>Clicando em "<b>Adicionar</b>" <img src=".\imagens\add.png">, vincula veículos a grupos de armação de veículos e um período de validade. Veja <a href="#banco_dados">Banco de dados</a> para mais informações sobre como gerenciar grupos de armação de veículos.</p>  
+  </li>
+-->  
+  
+  <p>Ao fim do cadastro, o veículo aparecerá na lista juntamente com algumas informações cadastradas. Você pode editar informações clicando no ícone de edição <img src=".\imagens\edicao.png">, ou excluí-lo clicando no ícone de exclusão <img src=".\imagens\digital3.png"></p>
+  <p><img src=".\imagens\veiculo_cadastrado.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>
+  <p>É possível visualizar detalhes do cadastro e editá-lo clicando duas vezes sob o mesmo.</p>
+
+  <h2 id="banco_dados" style="scroll-margin-top: 100px">Banco de dados</h2>
+  <!--REVISAR-->
+  <p>O banco de dados <img src=".\imagens\banco_dados.png"> é uma interface do Defense IA para criação e gerenciamento de grupos de armação de pessoas e veículos. Ou seja, é um ambiente para organizar as pessoas e veículos registrados na plataforma a fim de administrar inteligências de reconhecimento sob estes, permitindo identificá-los para notificação de alarmes e eventos. Veja <a>Eventos</a> para mais informações.</p>
+  <h3 id="banco_facial"style="scroll-margin-top: 100px">Banco de dados facial</h3>
+  <p>No banco de dados facial é possível criar grupos de comparação de faces e cadastrar pessoas e/ou adicionar da <a href="#lista_pessoas">Lista de pessoas</a>. Clique em "<b>Adicionar</b>" <img src=".\imagens\add.png"> para criar o grupo. </p>
+  <p><img src=".\imagens\add_grupoFaces.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>
+  <p>Insira um nome para o grupo e selecione uma cor para identificá-lo. O módulo permite também a inserção de comentários. Clique em "<b>Adicionar</b>" para criar o grupo, "<b>Salvar grupo e Adicionar pessoas</b>" para registrar uma nova pessoa no grupo e, automaticamente, na lista de pessoas.
+  <p><img src=".\imagens\grupoPessoas_add.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>
+  <li><img src=".\imagens\add_pessoas.png" style="height: auto;">: Botão para registrar pessoas ao grupo. Veja <a href="#lista_pessoas">Cadastro de Pessoas</a> para mais instruções de registro de pessoas.</li>
+  <li><img src=".\imagens\add_lista.png" style="height: auto;">: Botão para adicionar pessoas ao grupo a partir da lista de pessoas. Existem duas opções.
+    <a href="" data-toggle="collapse" data-target="#collapseOne1" aria-expanded="false" aria-controls="collapseOne1" onclick="toggleText('ver1', 'collapse-bt1');">
+      <img id="collapse-bt1" class="collapse-img rotated" src="./imagens/collapse.png"><span id="ver1" class="expandir"> Ver mais</span>
+    </a>
+  </li>
+
+    <div id="collapseOne1" class="collapse">
+      <p><b>Adicionar por Grupo de Pessoas: </b></p>
+      <p><img src=".\imagens\select_lista.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>
+      <p>Indique o grupo e/ou subgrupos que deseja incluir no banco de dados facial, clique em "<b>OK</b>", os integrantes do grupo de pessoas selecionado serão inseridos no grupo facial.</p>
+      <p><b>Adicionar por Lista de Pessoas: </b></p>
+      <p><img src=".\imagens\select_lista2.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>
+      <p>Selecione o grupo de pessoas no qual deseja buscar as pessoas na lista suspensa mostrada abaixo.</p>
+      <p><img src=".\imagens\listaSuspensa_grupoPessoas.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>
+      <p>Selecione as pessoas que deseja incluir no banco de dados facial, clique em "<b>OK</b>", os integrantes selecionados serão inseridos no grupo facial.</p>
+    </div>
+
+<!-- TEMPLATE - COLLAPSE
+  <li><img src=".\imagens\NOMEDAIMAGEM.png" style="height: auto;">: TEXTO. 
+    <a href="" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" onclick="toggleText('verXX', 'collapse-btXX');">    
+    <img id="collapse-btXX" class="collapse-img rotated" src="./imagens/collapse.png"><span id="verXX" class="expandir"> Ver mais</span>
+    </a>
+    <div id="collapseOne" class="collapse">
+        TEXTO.
+    </div>
+  </li>
+-->
+
+  <li><img src=".\imagens\armacao.png" style="height: auto;">: Botão para enviar e armar o grupo facial para dispositivos compatíveis com reconhecimento facial, como câmeras e gravadores. 
+    <a href="" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" onclick="toggleText('ver2', 'collapse-bt2');">    
+    <img id="collapse-bt2" class="collapse-img rotated" src="./imagens/collapse.png"><span id="ver2" class="expandir"> Ver mais</span>
+    </a>
+    <div id="collapseOne" class="collapse">
+      <p><b>Enviar grupo de comparação e faces: </b></p>
+      <p>A armação do grupo facial em dispositivos resume-se em duas etapas. Primeiramente, deve-se enviar o grupo de faces em questão para o dispositivo.</p>
+      <p><img src=".\imagens\enviar_armacao.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>
+      <p>Para enviar o grupo, clique em  em "<b>Adicionar</b>" <img src=".\imagens\add.png"> e selecione os dispositivos que deseja enviar o grupo</p>
+      <p><img src=".\imagens\selecionarDisp_armacao.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>
+      <p>Ao clicar em "<b>OK</b>", o(s) dispositivo(s) aparecerão na lista, assim como o status do envio do grupo facial para este(s). Clique em "<b>Próxima etapa</b>" no final da página.</p>
+      <p><b>Armar grupo de comparação e faces: </b></p>
+      <p>Para iniciar a comparação de faces obtidas pelo dispositivo com o grupo adicionado, ative o canal desejado e indique o valor de similaridade para identificação da face. Para isso, clique em "<b>Adicionar</b>" <img src=".\imagens\add.png"></p>
+      <p><img src=".\imagens\armar_grupo.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>
+      <p>Ao clicar em "<b>OK</b>", o canal selecionado é ativado para comparação de faces com o grupo configurado.</p>
+      <p class="instruction"><img src=".\imagens\nota.png" height="25px" id="nota"> É possível adicionar mais pessoas ao grupo facial após armação e configuração dos canais, o sistema atualiza o envio ao dispositivo automaticamente. Caso o dispositivo esteja indisponível, o ícone <img src=".\imagens\exclamacao.png" height="auto"> aparecerá, indicando a falha no envio.</p>
+    </div>
+  </li>
+
+  <li><img src=".\imagens\editar.png" style="height: auto;">: Botão para editar o grupo facial. É possível alterar nome, cor e comentários.</li>
+  <li><img src=".\imagens\excluir.png" style="height: auto;">: Botão para excluir o grupo facial. </li>
+
+  <h3 id="banco_veiculos"style="scroll-margin-top: 100px">Banco de dados de veículos</h3>
+  
+  <p>Assim como o banco de dados facial, no banco de dados de veículos é possível criar grupos de comparação de veículos e adicionar da <a href="#lista_veiculos">Lista de veículos</a>. Por padrão, um grupo que indica veículos de alto risco já vem configurado, é possível incluir veículos a este grupo e editar sua cor de identificação, mas não é possível renomeá-lo.</p>
+  <p><img src=".\imagens\grupo_AltoRisco.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>
+
+
+
+  <p>Ao contrário do banco de dados facial, não é necessário enviar o grupo a dispositivos de inteligência, uma vez que estes já identificam e vinculam-se automaticamente a dispositivos LPR cadastrados no sistema.</p>
+  <p>Clique em "<b>Adicionar</b>" <img src=".\imagens\add.png"> na aba de ferramentas acima na tela para criar um novo grupo de armação de veículos.</p>
+  <p><img src=".\imagens\add_grupoArmacaoVeiculos.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid">Insira um nome para o grupo e selecione uma cor para identificá-lo. O módulo permite também a inserção de comentários. Clique em "<b>Adicionar</b>" para criar o grupo.</p>
+  <p><img src=".\imagens\grupoVeiculos_add.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>
+  <li style="list-style: none;"><img src=".\imagens\add_lista.png" style="height: auto;">: Botão para inserir veículos ao grupo. Veja <a href="#lista_veiculos">Cadastro de Veículos</a> para mais instruções de registro de veículos.
+    <a href="" data-toggle="collapse" data-target="#collapseOne3" aria-expanded="false" aria-controls="collapseOne3" onclick="toggleText('ver3', 'collapse-bt3');">
+      <img id="collapse-bt3" class="collapse-img rotated" src="./imagens/collapse.png"><span id="ver3" class="expandir"> Ver mais</span>
+    </a>
+  </li>
+
+    <div id="collapseOne3" class="collapse">
+      <p><img src=".\imagens\select_listaVeiculos.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>
+      <p>Selecione os veículos que deseja incluir no grupo de armação, clique em "<b>OK</b>", os veículos selecionados serão adicionados ao grupo e os canais de LPR vinculados automaticamente.</p>
+    </div>
+  <li style="list-style: none;"><img src=".\imagens\editar.png" style="height: auto;">: Botão para editar o grupo de armação de veículos. É possível alterar nome, cor e comentários.</li>
+  <li style="list-style: none;"><img src=".\imagens\excluir.png" style="height: auto;">: Botão para excluir o grupo de armação de veículos. </li>
+  <br>
+  <h2 id="estacionamento" style="scroll-margin-top: 120px">Estacionamento</h2>
+  <p>As configurações de estacionamento e grupo de veículos podem ser feitas pelo módulo de configuração de estacionamento <img src=".\imagens\config-estacionamento.png"></p>
+  <h3>Configuração básica de estacionamento</h3>
+  <p>Para adicionar, editar, organizar e/ou excluir um estacionamento, acesse "Configuração básica de estacionamento". Para adicionar, clique em <b>"Adicionar"</b> ou <b>"Adicionar Estacionamento"</b>.</p>
+  <p><img src=".\imagens\basica_estacionamento.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>
+  <p>Preencha as infromações básicas do Estacionamento.</p>
+  <p><img src=".\imagens\etapa1-estacionamento.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>
+
+  <div class="table-responsive">
+    <table class="table table-bordered">
+    <thead>
+        <tr>
+        <th style="text-align: center;">Campo</th>
+        <th style="text-align: center;">Descrição</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <img src=".\imagens\nome-estacionamento.png" style="display: inline-block;">
+        </td>
+        <td>
+          Insira na caixa o nome que deseja chamar o estacionamento. O asterísco indica campo obrigatório.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img src=".\imagens\habilitar-contagem.png" style="height: auto;">
+        </td>
+        <td>
+          Botão para habilitar contagem de vagas. Quando habilitado apresenta novas opções.
+          <a href="" data-toggle="collapse" data-target="#collapseOne6" aria-expanded="false" aria-controls="collapseOne6" onclick="toggleText('ver6', 'collapse-bt6');">
+            <img id="collapse-bt6" class="collapse-img rotated" src="./imagens/collapse.png"><span id="ver6" class="expandir" style="font-size: 17px;"> Ver mais</span>
+          </a>
+
+          <div id="collapseOne6" class="collapse">
+            <p>Selecione a opção que deseja para contagem de vagas entre Contagem por entrada e saída ou Contagem por detector de vagas.</p>
+            <p><img src=".\imagens\mais-contagem.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>
+            <p>Insira nas caixas o total de vagas que o estacionamento comporta e a quantidade de vagas disponíveis para uso (esse número não pode ser maior que o número total de vagas.).</p>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img src=".\imagens\instantaneo-correspondencia.png" style="height: auto;">
+        </td>
+        <td>
+          Botão para habilitar e editar regra de autopreenchimento de placas no caso de leitura incompleta. Quando habilitado apresenta novas opções.
+          <a href="" data-toggle="collapse" data-target="#collapseOne7" aria-expanded="false" aria-controls="collapseOne7" onclick="toggleText('ver7', 'collapse-bt7');">
+            <img id="collapse-bt7" class="collapse-img rotated" src="./imagens/collapse.png"><span id="ver7" class="expandir" style="font-size: 17px;"> Ver mais</span>
+          </a>
+
+          <div id="collapseOne7" class="collapse">
+            <p><img src=".\imagens\regras-instantaneo.png" style="display: block;" class="img-fluid"></p>
+            <p></p>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img src=".\imagens\sobrescrever-veiculo.png" style="display: block;">
+        </td>
+        <td>
+          Botão para habilitar opção de sobrescrição de veículo nos registros de entrada caso o mesmo passe pela entrada mais de uma vez antes de passar em uma saída.
+        </td>
+      </tr>
+    </tbody>
+    </table>
+    </div>
+<!-- 
+  <p><img src=".\imagens\nome-estacionamento.png" style="display: inline-block;">: Insira o nome que deseja chamar o estacionamento na caixa. O asterísco indica campo obrigatório.</p>
+
+  <li style="list-style: none;"><img src=".\imagens\habilitar-contagem.png" style="height: auto;">: Botão para habilitar contagem de vagas. Quando habilitado apresenta novas opções.
+    <a href="" data-toggle="collapse" data-target="#collapseOne6" aria-expanded="false" aria-controls="collapseOne6" onclick="toggleText('ver6', 'collapse-bt6');">
+      <img id="collapse-bt6" class="collapse-img rotated" src="./imagens/collapse.png"><span id="ver6" class="expandir"> Ver mais</span>
+    </a>
+  </li>
+
+    <div id="collapseOne6" class="collapse">
+      <p>Selecione a opção que deseja para contagem de vagas entre Contagem por entrada e saída ou Contagem por detector de vagas.</p>
+      <p><img src=".\imagens\mais-contagem.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>
+      <p>Insira nas caixas o total de vagas que o estacionamento comporta e a quantidade de vagas disponíveis para uso (esse número não pode ser maior que o número total de vagas.).</p>
+    </div>
+
+
+  <li style="list-style: none;"><img src=".\imagens\instantaneo-correspondencia.png" style="height: auto;">: Botão para habilitar e editar regra de autopreenchimento de placas no caso de leitura incompleta. Quando habilitado apresenta novas opções.
+    <a href="" data-toggle="collapse" data-target="#collapseOne7" aria-expanded="false" aria-controls="collapseOne7" onclick="toggleText('ver7', 'collapse-bt7');">
+      <img id="collapse-bt7" class="collapse-img rotated" src="./imagens/collapse.png"><span id="ver7" class="expandir"> Ver mais</span>
+    </a>
+  </li>
+
+    <div id="collapseOne7" class="collapse">
+      <p><img src=".\imagens\regras-instantaneo.png" style="display: block;" class="img-fluid"></p>
+      <p></p>
+    </div>
+
+  <p><img src=".\imagens\sobrescrever-veiculo.png" style="display: block;">: Botão para habilitar opção de sobrescrição de veículo nos registros de entrada caso o mesmo passe pela entrada mais de uma vez antes de passar em uma saída.</p>
+-->
+  <p>Na próxima etapa, em Ponto de Entrada/Saída, adiciona-se os pontos de acesso e dispositivos LPR de acesso do estacionamento.</p>
+  <p><img src=".\imagens\etapa2-estacionamento.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>
+  <p>Clique em "Adicionar Ponto de Entrada e Saída" para adicionar um ponto de acesso do estacionamento. Ao nomeá-lo, as entradas e saídas do estacionamento poderão ser adicionadas.</p>
+  <p><img src=".\imagens\add-entrada.png" style="display: block;" class="img-fluid">
+    <a href="" data-toggle="collapse" data-target="#collapseOne8" aria-expanded="false" aria-controls="collapseOne8" onclick="toggleText('ver8', 'collapse-bt8');">
+      <img id="collapse-bt8" class="collapse-img rotated" src="./imagens/collapse.png"><span id="ver8" class="expandir"> Ver mais</span>
+    </a>
+  </p>
+
+  <div id="collapseOne8" class="collapse">
+    <p><img src=".\imagens\add-entrada2.png" style="display: inline-block;" class="img-fluid"></p>
+    <div class="table-responsive">
+      <table class="table table-bordered">
+        <thead>
+            <tr>
+            <th style="text-align: center;">Campo</th>
+            <th style="text-align: center;">Descrição</th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <b>Nome do Estacionamento</b>
+            </td>
+            <td>
+              Insira na caixa o nome que deseja chamar a entrada do estacionamento. O asterísco indica campo obrigatório.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <b>Modo de captura</b>
+            </td>
+            <td>
+              Selecione o modo de captura entre câmera única ou câmera dupla. Caso o modo 'câmera dupla' seja selecionado, aparecerá espaço para inserir um tempo de até 5s de coordenação entre as câmeras. O tempo definido é o período em que o veículo pode passar por ambas as câmeras sem haver registro duplo. 
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <b>Câmera de Entrada/Saída</b>
+            </td>
+            <td>
+              Clique em "+" para adicionar as câmeras que serão reposnáveis por realizar os registros de entrada. Para uma câmera realizar registros de entrada/saída ela deve estar cadastrada como um dispositivo "LPR de acesso", veja <a onclick="document.getElementById('GerenciamentoDisp').click();" style="text-decoration: underline;">Gerenciamento de dispositivos</a> para mais informações.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <b>Vídeo Porteiro</b>
+            </td>
+            <td>
+              Clique em "+" para adicionar dispositivos compatíveis com controle de acesso de pessoas (controladoras de acesso ou vídeo porteiros) para vinculá-lo à entrada. 
+            </td>
+          </tr>
+        </tbody>
+        </table>
+      </div>
+  </div>
+
+
+  <p><img src=".\imagens\add-saida.png" style="display: block;" class="img-fluid">
+    <a href="" data-toggle="collapse" data-target="#collapseOne9" aria-expanded="false" aria-controls="collapseOne9" onclick="toggleText('ver9', 'collapse-bt9');">
+      <img id="collapse-bt9" class="collapse-img rotated" src="./imagens/collapse.png"><span id="ver9" class="expandir"> Ver mais</span>
+    </a>
+  </p>
+
+  <div id="collapseOne9" class="collapse">
+    <p><img src=".\imagens\add-saida2.png" style="display: inline-block;" class="img-fluid"></p>
+    <div class="table-responsive">
+      <table class="table table-bordered">
+        <thead>
+            <tr>
+            <th style="text-align: center;">Campo</th>
+            <th style="text-align: center;">Descrição</th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <b>Nome do Estacionamento</b>
+            </td>
+            <td>
+              Insira na caixa o nome que deseja chamar a saída do estacionamento. O asterísco indica campo obrigatório.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <b>Modo de captura</b>
+            </td>
+            <td>
+              Selecione o modo de captura entre câmera única ou câmera dupla. Caso o modo 'câmera dupla' seja selecionado, aparecerá espaço para inserir um tempo de até 5s de coordenação entre as câmeras. O tempo definido é o período em que o veículo pode passar por ambas as câmeras sem haver registro duplo. 
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <b>Câmera de Entrada/Saída</b>
+            </td>
+            <td>
+              Clique em "+" para adicionar as câmeras que serão reposnáveis por realizar os registros de saída. Para uma câmera realizar registros de entrada/saída ela deve estar cadastrada como um dispositivo "LPR de acesso", veja <a onclick="document.getElementById('GerenciamentoDisp').click();" style="text-decoration: underline;">Gerenciamento de dispositivos</a> para mais informações.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <b>Vídeo Porteiro</b>
+            </td>
+            <td>
+              Clique em "+" para adicionar dispositivos compatíveis com controle de acesso de pessoas (controladoras de acesso ou vídeo porteiros) para vinculá-lo à saída. 
+            </td>
+          </tr>
+        </tbody>
+        </table>
+      </div>
+  </div>
+  <p class="instruction"><img src=".\imagens\nota.png" height="25px" id="nota"> A plataforma suporta até 60 entradas e saídas.</p>    
+
+  <p>Na terceira etapa, Regra de passagem, devem ser definidas as regras para entrada e saída dos veículos.</p>
+  <p><img src=".\imagens\etapa3-estacionamento.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>
+  <p>As regras de acesso podem ser definidas entre 3 opções, para veículos registrados, para todos os veículos, ou de forma personalizada.</p>
+  <li><h4><b>Veículos registrados</b></h4>
+    <a href="" data-toggle="collapse" data-target="#collapseOne22" aria-expanded="false" aria-controls="collapseOne22" onclick="toggleText('ver22', 'collapse-bt22');">    
+    <img id="collapse-bt22" class="collapse-img rotated" src="./imagens/collapse.png"><span id="ver22" class="expandir"> Ver mais</span>
+    </a>
+    <div id="collapseOne22" class="collapse">
+      <p>Caso a regra de acesso seja definida para veículos registrados, clique em "<b>Adicionar</b>" <img src=".\imagens\add.png"> e selecione se a regra deverá valer para o estacionamento todo, ou apenas para pontos de acesso escolhidos.</p>
+      <p><img src=".\imagens\regra-passagem2.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>  
+      <p>Selecione os grupos de veículos desejados para terem permissão de acesso e clique em "OK". Os veículos registrados em tais grupos agora possuem permissão de acesso nos pontos de acesso do estacionamento especificados.</p>
+      <p class="instruction"><img src=".\imagens\dica.png" height="25px" id="dica"> Veja em <a href="#grupo_veiculos">Grupo de Veículos</a> como configurar grupos de veículos.</p>  
+      <p><b>Permitir passagem quando o espaço disponível for 0</b> <img src=".\imagens\regra-passagem.png" style="display: inline-block;" class="img-fluid"></p> 
+      <p>Ao ativar esta regra, deve-se selecionar para quais grupos permitidos essa regra valerá. Essa regra ativada habilita o acesso de veículos com permissão mesmo quando todas as vagas do estacionamento estiverem ocupadas.</p>
+    </div>
+  </li>
+  <br>
+  <li><h4><b>Todos os veículos</b></h4>
+    <a href="" data-toggle="collapse" data-target="#collapseOne23" aria-expanded="false" aria-controls="collapseOne23" onclick="toggleText('ver23', 'collapse-bt23');">    
+    <img id="collapse-bt23" class="collapse-img rotated" src="./imagens/collapse.png"><span id="ver23" class="expandir"> Ver mais</span>
+    </a>
+    <div id="collapseOne23" class="collapse">
+      <p><b>Permitir a entrada de veículos na lista de bloqueio</b> <img src=".\imagens\regra-todos.png" style="display: inline-block;" class="img-fluid"></p> 
+      <p>Ao ativar esta regra, todos os veículos, inclusive os registrados como veículos de risco, ou na lsita de bloqueio, terão acesso liberado.</p>
+      <p><b>Permitir passagem quando o espaço disponível for 0</b> <img src=".\imagens\regra-passagem.png" style="display: inline-block;" class="img-fluid"></p> 
+      <p>Ao ativar esta regra, deve-se selecionar para quais grupos permitidos essa regra valerá. Essa regra ativada habilita o acesso de veículos com permissão mesmo quando todas as vagas do estacionamento estiverem ocupadas.</p>
+    </div>
+  </li>
+  <br>
+  <li><h4><b>Personalizado</b></h4>
+    <a href="" data-toggle="collapse" data-target="#collapseOne24" aria-expanded="false" aria-controls="collapseOne24" onclick="toggleText('ver24', 'collapse-bt24');">    
+    <img id="collapse-bt24" class="collapse-img rotated" src="./imagens/collapse.png"><span id="ver24" class="expandir"> Ver mais</span>
+    </a>
+    <div id="collapseOne24" class="collapse">
+      <p>Caso a regra de acesso seja definida para personalizado, clique em "<b>Adicionar</b>" <img src=".\imagens\add.png"> e selecione se a regra deverá valer para o estacionamento todo, ou apenas para pontos de acesso escolhidos.</p>
+      <p><img src=".\imagens\regra-passagem2.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>  
+      <p>Selecione os grupos de veículos desejados para terem permissão de acesso e clique em "OK". Também é possível definir um período o qual a regra será válida. Os veículos registrados em tais grupos agora possuem permissão de acesso nos pontos de acesso do estacionamento e durante o período especificado.</p>
+      
+      <div class="table-responsive">
+        <table class="table table-bordered">
+          <thead>
+              <tr>
+              <th style="text-align: center; width: 25%;">Regra</th>
+              <th style="text-align: center; width: 75%;">Descrição</th>
+              </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <p><img src=".\imagens\todos-veiculos.png" style="display: block; height: auto; width: auto;" class="img-fluid"></p>  
+              </td>
+              <td>
+                Quando habilitada, permite acesso de todos os veículos. Permite a seleção de um período para a regra ser válida, assim como filtrar ou não veículos na lista de bloqueio.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p><img src=".\imagens\regra-passagem.png" style="display: block; max-width: 120%;" class="img-fluid"></p>  
+              </td>
+              <td>
+                <p>Ao ativar esta regra, deve-se selecionar para quais grupos permitidos essa regra valerá. Essa regra ativada habilita o acesso de veículos com permissão mesmo quando todas as vagas do estacionamento estiverem ocupadas.</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p><img src=".\imagens\abrir-verificacao.png" style="display: block; height: auto; width: auto;" class="img-fluid"></p>  
+              </td>
+              <td>
+                <p>Quando habilitada, esta regra não permite o acesso automático ao estacionamento a veículos com permissão. O veículo é identificado, mas a entrada não é liberada. A entrada deve ser habilitada manualmente. Há duas opções:</p>
+                <p>Habilitar entrada por cartão, para isso, a sub-regra "Abrir barreira ao passar o cartão após verificação" <img src=".\imagens\abrir-verificacao2.png"> deve ser habilitada. Ou, caso a sub-regra não seja habilitada, a entrada só será liberada por acionamento manual pelo Defense.</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p><img src=".\imagens\abrir-cartao.png" style="display: block; height: auto; width: auto;" class="img-fluid"></p>  
+              </td>
+              <td>
+                <p>Quando habilitada, esta regra permite o acesso ao estacionamento ao passar um cartão válido.</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p><img src=".\imagens\contagem-personalizada.png" style="display: block; height: auto; width: auto;" class="img-fluid"></p>  
+              </td>
+              <td>
+                <p>Há três opções para realizar a contagem de vagas no estacionamento: A primeira opção contabiliza cada veículo que entra no estacionamento como uma vaga ocupada. A segunda opção contabiliza apenas veículos não registrados como vaga ocupada. Na terceira opção, 'personalizado', deve-se selecionar os grupos de veículos que não serão contabilizados como vaga ocupada.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </li>
+  <br>
+  <li><h4><b>Enviar lista negra e lista branca para o dispositivo</b></h4>
+    <a href="" data-toggle="collapse" data-target="#collapseOne25" aria-expanded="false" aria-controls="collapseOne25" onclick="toggleText('ver25', 'collapse-bt25');">    
+    <img id="collapse-bt25" class="collapse-img rotated" src="./imagens/collapse.png"><span id="ver25" class="expandir"> Ver mais</span>
+    </a>
+    <div id="collapseOne25" class="collapse">
+      <p>Esta regra habilita o envio de listas de permissão e bloqueio de veículos ao dispositivo de acesso LPR. Caso a plataforma esteja desconectada, o dispositivo fará a gestão de acesso com base em tais listas.</p>
+    </div>
+  </li>
+  <br>
+  <p>Em Detecção de vagas de estacionamento, na quarta etapa de configuração, dispositivos de detecção de vagas podem ser escolhidos caso o estacionamento seja configurado para realizar a gestão de vagas via sensores.</p>
+  <p><img src=".\imagens\etapa4-estacionamento.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>
+  <br>
+  <p>Na quinta etapa, caso desejado, também é possível adicionar painés LED compatíveis com a plataforma para apresentar o número de vagas ainda disponíveis no estacionamento.</p>
+  <p><img src=".\imagens\etapa5-estacionamento.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>
+  <br>
+  <p>Ao fim da configuração, é possível visualizar e gerenciar o estacionamento criado.</p>
+  <p><img src=".\imagens\estacionamento-prev.png" style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>
+
+  <br>
+  <h3 id="grupo_veiculos">Grupo de veículos</h3>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <p style="text-align: center; font-size: 15px;">Defense IA® é um produto Intelbras©. Todos os direitos reservados.</p>
+</div> 

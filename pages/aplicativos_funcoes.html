@@ -1,0 +1,253 @@
+<script>
+  function delay(){
+  setTimeout(() => {
+    window.location.href="#visualizar"
+  }, "300");
+  }
+</script>
+
+<div class="apps" id="apps_funcoes">
+  <p id="aplicativos" class="p-APP">
+    <img src=".\imagens\centro_monitoramento.png" class="APP img-fluid" onclick="abrir('monitoramento')">
+    <img src=".\imagens\central_eventos.png" class="APP img-fluid" onclick="abrir('eventos')">
+    <img src=".\imagens\deepXplore.png" class="APP img-fluid" onclick="abrir('deep')">
+    <img src=".\imagens\gestao_acesso.png" class="APP img-fluid" onclick="abrir('acesso')">
+    <img src=".\imagens\estacionamento.png" class="APP img-fluid" onclick="abrir('parking')"> 
+    <img src=".\imagens\analise_inteligente.png" class="APP img-fluid" onclick="abrir('bi')">
+    <img src=".\imagens\manutencao.png" class="APP img-fluid" onclick="abrir('manutencao')">
+  </p>
+  <div id="monitoramento" class="hidden content" style="scroll-margin-top: 100px">
+    <button onclick="voltar('monitoramento')">Voltar</button><span><h2 id="centro_monitoramento"> Centro de monitoramento</h2></span>
+    <p>É no centro de monitoramento em que se encontram as principais funcionalidades de sistema de monitoramento do Defense IA. Visualização ao vivo, reprodução de gravações, mapas digitais, eventos e outras funcionalidades podem ser acessadas por aqui.</p>
+    <p>O centro de monitoramento conta com 3 interfaces principais: Monitor, Video wall e Mapa.</p>
+
+    <h3>Monitor</h3>
+    <p>É no monitor onde navega-se por canais de vídeo de dispositivos conectados à plataforma. Existem dois modos de navegá-los, visualizando-os em tempo real, ou reproduzindo suas gravações.</p>
+    <p><img src=".\imagens\inicial_monitoramento.png"style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>
+
+    <p>Para visualizar um canal na grade de visualização, arraste-o à janela desejada, ou clique duas vezes sob o mesmo (caso clique duas vezes sob o dispositivo, todos os canais vinculados a ele serão abertos). </p>
+        <p><img src=".\imagens\arrastar_canal.png"style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>
+        <p>Na aba de ferramentas superior é possível personalizar a grade de visualização.</p>
+        <p><img src=".\imagens\grades_visualizacao.png"style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>
+        <div class="table-responsive">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th style="text-align: center;">Ícone</th>
+                <th style="text-align: center;">Descrição</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><img src=".\imagens\grade1.png"style="display: block;" class="img-fluid"><br>Salvar visualização</td>
+                <td>Salva os canais abertos em suas respectivas posições na grade de visualização, ao salvá-la, poderá acessar a mesma disposição novamente na aba <a data-toggle="collapse" data-target="#collapseOne04" aria-expanded="false" aria-controls="collapseOne04" onclick="toggleText('ver04', 'collapse-bt04'); delay();">Visualizar</a></td>
+                
+              </tr>
+              <tr>
+                <td><img src=".\imagens\grade2.png"style="display: block;" class="img-fluid"><br>Fechar visualização</td>
+                <td>Fecha todos os canais abertos na grade de visualização.</td>
+              </tr>
+              <tr>
+                <td><img src=".\imagens\grade3.png"style="display: block;" class="img-fluid"><br>4 janelas</td>
+                <td>Dispõe a grade de visualização em 4 janelas.</td>
+              </tr>
+              <tr>
+                <td><img src=".\imagens\grade4.png"style="display: block;" class="img-fluid"><br>9 janelas</td>
+                <td>Dispõe a grade de visualização em 9 janelas.</td>
+              </tr>
+              <tr>
+                <td><img src=".\imagens\grade5.png"style="display: block;" class="img-fluid"><br>16 janelas</td>
+                <td>Dispõe a grade de visualização em 16 janelas.</td>
+              </tr>
+              <tr>
+                <td><img src=".\imagens\grade6.png"style="display: block;" class="img-fluid"><br>Modo divisão</td>
+                <td>Apresenta outros templates de disposição da grade de visualização (1, 6, 8, 13, 20, 25, 36, 64), além disso, também permite o usuário personalizar a própria divisão.</td>
+              </tr>
+              <tr>
+                <td><img src=".\imagens\grade7.png"style="display: block;" class="img-fluid"><br>Tela cheia</td>
+                <td>Alterna a grade de visualização para tela cheia.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- REVISAR -->
+        <p class="instruction"><img src=".\imagens\nota.png" height="25px" id="nota"> Para mais detalhes sobre configurações e utilização do módulo e suas ferramentas, veja <a href="">Central de monitoramento</a>.</p>
+
+
+    <li style="list-style: none;"><b>Visualização ao vivo</b>
+      <a href="" data-toggle="collapse" data-target="#collapseOne04" aria-expanded="false" aria-controls="collapseOne04" onclick="toggleText('ver04', 'collapse-bt04');">    
+      <img id="collapse-bt04" class="collapse-img rotated" src="./imagens/collapse.png"><span id="ver04" class="expandir"> Ver mais</span>
+      </a>
+      <div id="collapseOne04" class="collapse">
+        <br>
+        <p><img src=".\imagens\visualizacao_vivo.png"style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>
+        <br>
+        <p>A visualização ao vivo é a interface onde você pode utilizar todos os canais interativos de dispositivos do sistema. É possível visualizar canais de vídeo, radares e mapas. Também é possível emitir sinais de saída de dispositivos compatíveis, como abertura e fechamento de portas em canais de porta, efetuar ligações em canais de vídeo portaria e abrir cancelas em canais de LPR. Além disso, também é possível utilizar uma janela de visualização como navegador web.</p>
+        <br>
+        <p><img src=".\imagens\monitoramento_cheio.png"style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>
+        <div class="table-responsive">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th style="text-align: center;">Índice</th>
+                <th style="text-align: center;">Canal</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Canal de vídeo inteligente</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Canal de LPR</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Canal de vídeo térmico</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Radar</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Mapa</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Navegador</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>Canal de portaria remota</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>Canal de porta</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>Canal de vídeo de CA</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <br>
+        <p>À esquerda da tela, há 3 blocos de interface, Recursos, Visualizar e PTZ.</p>
+        <br>
+        <h4><b>Recursos:</b></h4>
+          <p>Neste primeiro bloco localizam-se os dispositivos e elementos da plataforma que podem ser inseridos na grade de visualização. São estes: Organizações (organizações de dispositivos configuradas na plataforma, veja <a onclick= "document.getElementById('ConfigBasicas').click();" style="text-decoration: underline; cursor: pointer;">Configurações Básicas</a> para mais informações sobre organizações.), Navegador e Mapas</p>
+          <p><img src=".\imagens\recursos.png"style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>
+
+          <p style="list-style: none;"><b>Organizações:</b>
+            <!-- REVISAR -->
+            <p>Aqui todas as organizações e dispositivos adicionados ao sistema ficam disponíveis para acesso, isso inclui dispositivos em <a href="">multi-site</a>, <a href="">servidores cascateados</a> e <a href="">servidores auxiliares</a>.</p>
+            <p><img src=".\imagens\orgs.png"style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>
+          </p>
+          <p style="list-style: none;"><b>Navegador:</b>
+          <p></p>
+          <p><img src=".\imagens\navegador.png"style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>
+          </p>
+          <p style="list-style: none;"><b>Mapas:</b>
+          <p></p>
+          <p><img src=".\imagens\mapa_visu.png"style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>
+          </p>
+
+        <h4 id="visualizar" style="scroll-margin-top: 100px"><b>Visualizar:</b></h4>
+          <p>Em Visualizar encontra-se os mosaicos salvos. Ao clicar sob uma pasta de mosaicos com o botão direito, é possível selecionar a opção ronda e um tempo para a alternação entre os mosaicos. </p>
+          <p><img src=".\imagens\mosaicos.png"style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>
+          <p>Ao iniciar a ronda, novos ícones aparecem na aba de ferramentas, permitindo o encerramento, pausa e monitoramento do tempo restante do mosaico atual na grade de visualização.</p>
+          <p><img src=".\imagens\ronda.png"style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>
+
+        <h4><b>PTZ:</b></h4>
+        
+        <h4><b>Painel de eventos:</b></h4>
+        <p>Ao lado das ferramentas de grade de visualização, há o botão para alternar a visualização do painel de eventos.</p>
+        <p><img src=".\imagens\painel_eventos.png"style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>
+        <p>O painel de eventos é uma aba auxiliar onde é possível acompanhar eventos que ocorrem nos dispositivos que estão sendo visualizados no momento</p>
+        <p><img src=".\imagens\painel_eventos2.png"style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>
+        <p>É possível pausar atualização de eventos, excluir todos ou filtrar os tipos de eventos que deseja visualizar pelo painel de eventos a partir das ferramentas de sua interface.</p>
+        <p><img src=".\imagens\ferramentas_painel.png"style="display: block; margin-left: auto; margin-right: auto;" class="img-fluid"></p>
+        <div class="table-responsive">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th style="text-align: center;">Ícone</th>
+                <th style="text-align: center;">Descrição</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><img src=".\imagens\ferramenta1.png"style="display: block;" class="img-fluid"><br>Pausar atualização</td>
+                <td>Pausa a atualização de eventos. O painel de eventos não mostrará mais eventos a não ser que retome a atualização.</td>
+              </tr>
+              <tr>
+                <td><img src=".\imagens\ferramenta2.png"style="display: block;" class="img-fluid"><br>Apagar todos os eventos</td>
+                <td>Apaga todos os eventos recebidos pelos dispositivos.</td>
+              </tr>
+              <tr>
+                <td><img src=".\imagens\ferramenta3.png"style="display: block;" class="img-fluid"><br>Mostrar todos</td>
+                <td>Mostra todos os eventos recebidos pelos dispositivos.</td>
+              </tr>
+              <tr>
+                <td><img src=".\imagens\ferramenta4.png"style="display: block;" class="img-fluid"><br>Controle de acesso</td>
+                <td>Mostra apenas eventos recebidos por dispositivos de controle de acesso.</td>
+              </tr>
+              <tr>
+                <td><img src=".\imagens\ferramenta5.png"style="display: block;" class="img-fluid"><br>Reconhecimento facial</td>
+                <td>Mostra apenas eventos recebidos por dispositivos de identificação e reconhecimento facial.</td>
+              </tr>
+              <tr>
+                <td><img src=".\imagens\ferramenta6.png"style="display: block;" class="img-fluid"><br>LPR</td>
+                <td>Mostra apenas eventos recebidos por dispositivos de LPR.</td>
+              </tr>
+              <tr>
+                <td><img src=".\imagens\ferramenta7.png"style="display: block;" class="img-fluid"><br>Acesso LPR</td>
+                <td>Mostra apenas eventos recebidos por dispositivos de controle de acesso de veículos.</td>
+              </tr>
+              <tr>
+                <td><img src=".\imagens\ferramenta8.png"style="display: block;" class="img-fluid"><br>Metadados de vídeo</td>
+                <td>Mostra apenas eventos recebidos por dispositivos com inteligência de metadados de pessoas.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </li>
+    <li style="list-style: none;"><b>Reprodução</b>
+      <a href="" data-toggle="collapse" data-target="#collapseOne05" aria-expanded="false" aria-controls="collapseOne05" onclick="toggleText('ver05', 'collapse-bt05');">    
+      <img id="collapse-bt05" class="collapse-img rotated" src="./imagens/collapse.png"><span id="ver05" class="expandir"> Ver mais</span>
+      </a>
+      <div id="collapseOne05" class="collapse">
+          TEXTO.
+      </div>
+    </li>
+
+    <div id="eventos" class="hidden content" style="scroll-margin-top: 100px">
+    <button onclick="voltar('eventos')">Voltar</button><span><h2 id="central_eventos"> Central de eventos</h2></span>
+
+    </div>
+    <div id="deep" class="hidden content" style="scroll-margin-top: 100px">
+      <button onclick="voltar('deep')">Voltar</button>
+
+    </div>
+    <div id="acesso" class="hidden content" style="scroll-margin-top: 100px">
+      <button onclick="voltar('acesso')">Voltar</button>
+
+    </div>
+    <div id="parking" class="hidden content" style="scroll-margin-top: 100px">
+      <button onclick="voltar('parking')">Voltar</button>
+
+    </div> 
+    <div id="bi" class="hidden content" style="scroll-margin-top: 100px">
+      <button onclick="voltar('bi')">Voltar</buttonp>
+
+    </div>
+    <div id="manutencao" class="hidden content" style="scroll-margin-top: 100px">
+      <button onclick="voltar('manutencao')">Voltar</button>
+
+    </div>
+  </div>
+</div>
