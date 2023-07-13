@@ -1,0 +1,45 @@
+<script>
+ const dropdown = document.querySelector('.dropdown');
+ const dropdownMenu = document.querySelector('.dropdown-menu');
+ 
+ dropdown.addEventListener('click', function() {
+   dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+ });
+
+ function botaoMenu(){
+  document.querySelector('.sidebar').classList.toggle('active');
+  //document.querySelector('.menu-icon').classList.toggle('active');
+}
+
+</script>
+
+
+<!-- header.html -->
+<nav class="navbar fixed-top header">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="http://10.100.20.41">
+      <img id="logo" class="logo inverted" src=".\imagens\logo.png" alt="Logo">
+    </a>
+    <div id="MenuBt" onclick="botaoMenu()">
+      <img src=".\imagens\menu.png" class="menu-icon inverted expandir" width="50" height="auto" alt="">
+  </div>
+
+  <div class="dropdown">
+    <button id="mode-btn">
+      <img id="mode-icon" class="inverted" src="./imagens/sun.png" alt="Sun Icon"  style="height: 40px">
+    </button>
+    <ul class="dropdown-menu" id="mode-dropdown" style="left: -100px">
+      <li>
+        <button onclick="setMode('light-mode')">
+          <span style="font-size: 12px; padding: 10px;">Modo Claro     </span>
+          <img src="./imagens/sun.png" alt="Light Mode Icon" style="height: 23px"></button>
+      </li>
+      <li>
+        <button onclick="setMode('dark-mode')">
+          <span style="font-size: 12px; padding: 10px;">Modo Escuro</span>
+          <img src="./imagens/moon.png" alt="Dark Mode Icon"  style="height: 20px"></button>
+      </li>
+    </ul>
+  </div>
+  
+</nav>

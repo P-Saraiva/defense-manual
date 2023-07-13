@@ -1,0 +1,185 @@
+<link rel="stylesheet" href="style.css">
+
+<script>
+  $('.toggle-button').click(function(e) {
+    e.preventDefault();
+    var target = $(this).attr('href');
+    if (target === '#' || target === '') {
+      return;
+    }
+    // Hide all submenus except the one that was clicked
+    $('.nav-item').not($(this).closest('.nav-item')).removeClass('active');
+    // Toggle active class on the clicked sidebar item to expand/hide sub-menu
+    $(this).closest('.nav-item').toggleClass('active');
+    // Hide all other content and show the target content
+    $('.shown').addClass('hidden').removeClass('shown');
+    $(target).removeClass('hidden').addClass('shown');
+    // Scroll smoothly to target element
+    $('html, body').animate({
+    scrollTop: $(target).offset().top - 100
+    }, 70);
+
+    if(target === '#aplicativos_funcoes')
+     {
+       
+      }
+  });
+  document.getElementById("Prefacio").click();
+</script>
+
+<div data-bs-spy="scroll" data-bs-target=".sidebar">
+  <div class="sidebar">
+    <nav class="nav nav-pills flex-column nav-item">
+      <li class="nav-item">
+        <a id="Prefacio" href="#prefacio" class="nav-link toggle-button"><b>Prefácio</b></a>
+        <ul class="sub-menu">
+          <nav class="nav nav-pills flex-column">
+            <li class="nav-item"><a class="nav-link" href="#instrucoes_seguranca">Instruções de Segurança</a></li>
+            <li class="nav-item"><a class="nav-link" href="#historico">Histórico de revisão</a></li>
+            <li class="nav-item"><a class="nav-link" href="#aviso">Aviso de proteção	de privacidade</a></li>
+            <li class="nav-item"><a class="nav-link" href="#sobre">Sobre o Manual</a></li>
+            <li class="nav-item"><a class="nav-link" href="#defense-ia">Defense IA</a></li>
+          </nav>
+        </ul>
+      </li>
+    </nav>
+    <ul class="nav flex-column">
+      <li class="nav-item">
+       <a id="Instalacao" href="#instalacao_implantacao" class="nav-link toggle-button"><b>Instalação e Implantação</b></a>
+       <ul class="sub-menu">
+          <nav class="nav nav-pills flex-column">
+            <li class="nav-item"><a class="nav-link" href="#requisitos_do_servidor">Requisitos do servidor</a></li>
+            <li class="nav-item"><a class="nav-link" href="#requisitos_do_cliente">Requisitos do cliente</a></li>
+            <li class="nav-item"><a class="nav-link" href="#server_unico">Implantação de servidor único</a></li>
+            <li class="nav-item"><a class="nav-link" href="#implantacao_distribuida">Implantação distribuída</a></li>
+            <li class="nav-item"><a class="nav-link" href="#implantacao_LAN_WAN">Mapeamento LAN para WAN</a></li>
+          </nav>
+        </ul>
+      </li>
+    </ul>
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a id="ConfigBasicas" href="#configuracoes_basicas" class="nav-link toggle-button"><b>Configurações Básicas</b></a>
+        <ul class="sub-menu">
+          <ul class="nav nav-pills flex-column">
+            <li class="nav-item"><a class="nav-link" href="#instalacao_cliente">Instalação e configuração do cliente</a></li>
+            <li class="nav-item"><a class="nav-link" href="#menu_principal">Menu principal</a></li>
+            <li class="nav-item"><a class="nav-link" href="#menu_configuracoes">Menu de configurações</a></li>
+            <li class="nav-item"><a class="nav-link" href="#configuracao_dispositivos">Configuração de dispositivos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#usuarios_permissoes">Usuários e permissões </a></li>
+            <li class="nav-item"><a class="nav-link" href="#armazenamento">Armazenamento</a></li>
+          </ul>
+        </ul>
+      </li>
+    </ul>
+    <ul class="nav flex-column">
+      <li class="nav-item">
+       <a href="#configuracoes_iniciais" class="nav-link toggle-button"><b>Configurações Iniciais de Aplicativos</b></a>
+       <ul class="sub-menu">
+          <ul class="nav nav-pills flex-column">
+            <li class="nav-item"><a class="nav-link" href="#config_gravacao">Configuração de gravações</a></li>
+            <li class="nav-item"><a class="nav-link" href="#config_eventos">Configuração de eventos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#config_mapa">Configuração de Mapa</a></li>
+            <li class="nav-item"><a class="nav-link" href="#config_PeV">Configuração de Pessoas e Veículos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#banco_dados">Banco de dados</a></li>
+            <li class="nav-item"><a class="nav-link" href="#estacionamento">Estacionamento</a></li>
+          </ul>
+        </ul>
+      </li>
+    </ul>
+    <ul class="nav flex-column">
+      <li class="nav-item">
+       <a id="ConfigSistema" href="#configuracoes_sistema" class="nav-link toggle-button"><b>Configurações do Sistema</b></a>
+       <ul class="sub-menu">
+          <ul class="nav nav-pills flex-column">
+            <li class="nav-item"><a class="nav-link" href="#implantacao">Implantação</a></li>
+            <li class="nav-item"><a class="nav-link" href="#licenca">Licença</a></li>
+            <li class="nav-item"><a class="nav-link" href="#parametros">Parâmetros</a></li>
+            <li class="nav-item"><a class="nav-link" href="#backup">Backup</a></li>
+            <li class="nav-item"><a class="nav-link" href="#sintese">Síntese</a></li>
+          </ul>
+        </ul>
+      </li>
+    </ul>
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a id="APPS" href="#aplicativos_funcoes" class="nav-link toggle-button"  onclick="voltar('RafaLindoS2')"><b>Aplicativos e Funções</b></a>
+        <!--
+        <ul class="sub-menu">
+          <ul class="nav nav-pills flex-column">
+            <li class="nav-item"><a class="nav-link" href="#centro_monitoramento">Centro de monitoramento</a></li>
+            <li class="nav-item"><a class="nav-link" href="#central_eventos">Central de eventos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#deep">DeepXplore</a></li>
+            <li class="nav-item"><a class="nav-link" href="#gestao_acesso">Gestão de Acesso</a></li>
+            <li class="nav-item"><a class="nav-link" href="#estacionamento">Estacionamento</a></li>
+            <li class="nav-item"><a class="nav-link" href="#analise_inteligente">Análise inteligente</a></li>
+            <li class="nav-item"><a class="nav-link" href="#manutencao">Manutenção</a></li>
+          </ul>
+        </ul>
+        -->
+      </li>
+    </ul>
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a id="GerenciamentoDisp" href="#gerenciamento_dispositivos" class="nav-link toggle-button"><b>Gerenciamento de Dispositivos</b></a>
+        <ul class="sub-menu">
+          <ul class="nav nav-pills flex-column">
+            <li class="nav-item"><a class="nav-link" href="#">Não existente</a></li>
+          </ul>
+        </ul>
+      </li>
+    </ul>
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a href="#monitoramento_reproducao" class="nav-link toggle-button"><b>Central de Monitoramento e Reprodução</b></a>
+        <ul class="sub-menu">
+          <ul class="nav nav-pills flex-column">
+            <li class="nav-item"><a class="nav-link" href="#">Não existente</a></li>
+          </ul>
+        </ul>
+      </li>
+    </ul>
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a id="Eventos" href="#central_eventos" class="nav-link toggle-button"><b>Central de Eventos</b></a>
+        <ul class="sub-menu">
+          <ul class="nav nav-pills flex-column">
+            <li class="nav-item"><a class="nav-link" href="#">Não existente</a></li>
+          </ul>
+        </ul>
+      </li>
+    </ul>
+    <!--
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a id="gerenciamento_dados" href="#gerenciamento_dados" class="nav-link toggle-button"><b>Gerenciamento de Dados</b></a>
+        <ul class="sub-menu">
+          <ul class="nav nav-pills flex-column">
+            <li class="nav-item"><a class="nav-link" href="#">Não existente</a></li>
+          </ul>
+        </ul>
+      </li>
+    </ul>
+    -->
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a href="#funcoes_avancadas" class="nav-link toggle-button"><b>Configurações Avançadas</b></a>
+        <ul class="sub-menu">
+          <ul class="nav nav-pills flex-column">
+            <li class="nav-item"><a class="nav-link" href="#">Não existente</a></li>
+          </ul>
+        </ul>
+      </li>
+    </ul>
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a href="#manutencao" class="nav-link toggle-button"><b>Manutenção</b></a>
+        <ul class="sub-menu">
+          <ul class="nav nav-pills flex-column">
+            <li class="nav-item"><a class="nav-link" href="#">Não existente</a></li>
+          </ul>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
